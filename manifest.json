@@ -40,15 +40,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "PIOGO3/aRdGPbvh3R9nX6Q=="
+          "hash": "sFmMuPVPf1HR/E7cDf1TCA=="
         }
       },
       "is_incremental": false,
