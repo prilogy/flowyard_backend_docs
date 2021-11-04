@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#1040;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1103; &#1080; &#1072;&#1074;&#1090;&#1086;&#1088;&#1080;&#1079;&#1072;&#1094;&#1080;&#1103; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#1040;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1103; &#1080; &#1072;&#1074;&#1090;&#1086;&#1088;&#1080;&#1079;&#1072;&#1094;&#1080;&#1103; ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="аутентификация-и-авторизация">Аутентификация и авторизация</h1>
+
+<h2 id="стратегии-аутентификации">Стратегии аутентификации</h2>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api/{v}/authentication/credentials</code></td>
+<td>Аутентификация с email и паролем</td>
+</tr>
+<tr>
+<td><code>api/{v}/authentication/refresh-token</code></td>
+<td>Аутентификация с рефреш токеном</td>
+</tr>
+</tbody>
+</table>
+<p>Вход в приложение производится по стратегии с email и паролем. Далее, для восстановления сессии при повторном входе,
+аутентифкаиця проводится по рефреш токену.</p>
+<p>Каждая из стратегий возвращает 2 токена:</p>
+<ul>
+<li>Refresh token - токен для повторной аутентификации позднее</li>
+<li>Access token (bearer, JWT) - токен для авторизации запросов</li>
+</ul>
+<p>В результате работы любой из стратегий может быть два ответа сервера:</p>
+<ul>
+<li><code>200</code> - аутентификация успешна</li>
+<li><code>400</code> - аутентификация провалена (в таком случае, если аутентификация уже была осуществлена, - происходит разлогин)</li>
+</ul>
+<h2 id="access-token">Access token</h2>
+<ul>
+<li>Должен добавляться к каждому запросу из авторизованной части приложения, в хедер <code>Authorization</code> в виде
+значения <code>Bearer {access-token}</code></li>
+<li>Не хранится в локальном хранилище приложения</li>
+</ul>
+<p>Любой запрос может вернуть следущие коды</p>
+<ul>
+<li><code>401</code> - access token невалиден или не передан</li>
+<li><code>403</code> - у пользователя не хватает прав на выполнение запроса/действия</li>
+</ul>
+<h2 id="контекст-компании">Контекст компании</h2>
+<p>Для установки контекста компании существует хедер <code>CurrentCompanyId</code>, в который устанавливается текущий <code>Id</code> компании.
+Важно синхронизировать это значение и состояние фронтенд приложения. При смене текущей компании приложении происходят
+следующие действия:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Продолжение в разработке</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/authorization_and_auth.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
