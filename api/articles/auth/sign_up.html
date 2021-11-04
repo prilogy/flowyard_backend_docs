@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
+    <title>&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
+    <meta name="title" content="&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,68 +67,35 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="введение">Введение</h1>
+<h1 id="регистрация">Регистрация</h1>
 
-<p>Сервер придерживается RESTful архитектуры, тем не менее выполняет не все спецификации, поэтому является REST-Like.</p>
-<p>Авторизация проводится на основе схемы <a href="articles/authorization_and_auth.md"><strong>Bearer</strong></a></p>
-<h2 id="базовая-архитектура">Базовая архитектура</h2>
-<h3 id="restful-контроллер">RESTful контроллер</h3>
-<p>Или <strong>контроллеры ресуров</strong>, работают на основе одного интерфейса, и имеют сделующие эндпоинты</p>
+<h2 id="регистрация-через-приглашение-companyinvite">Регистрация через приглашение (<code>CompanyInvite</code>)</h2>
+<p>При наличии кода от приглашения(<code>companyInvite.code</code>), регистрация проходит с помощью следующих роутов</p>
 <table>
 <thead>
 <tr>
+<th>Id</th>
 <th>URI</th>
-<th>Тип запроса</th>
-<th>Действие</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>api/{v}/{resource}</code></td>
-<td><code>POST</code></td>
-<td>Создание</td>
+<td>1</td>
+<td><code>GET/ api/v1/authentication/sign-up/company-invite/{code}</code></td>
+<td>Проверка кода на валидность, возвращает модель компании, в которую будет добавлен пользователь после регистрации</td>
 </tr>
 <tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>PUT</code></td>
-<td>Редактирование</td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>PATCH</code></td>
-<td>Частичное редактирование</td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>DELETE</code></td>
-<td>Удаление</td>
-</tr>
-<tr>
-<td><a href="articles/resources/index.html"><code>api/{v}/{resource}</code></a></td>
-<td><code>GET</code></td>
-<td><a href="articles/resources/index.html">Получение списка</a></td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>GET</code></td>
-<td>Получение одного</td>
+<td>2</td>
+<td><code>POST/ api/v1/authentication/sign-up/company-invite</code></td>
+<td>Регистрация</td>
 </tr>
 </tbody>
 </table>
-<p>Где параметры</p>
-<ul>
-<li><p><code>{v}</code> - версия контроллера</p>
-</li>
-<li><p><code>{resource}</code> - название ресурса</p>
-</li>
-<li><p><code>{id}</code> - Id ресурса</p>
-</li>
-</ul>
-<p>Описание каждого контроллера и эндпоинта API доступно в <a href="https://fly.prilogy.ru/swagger/index.html">Swagger UI</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Продолжение в разработке</p>
-</div>
+<p>Проверка валидности кода (и, например, вывод информации о компании из приглашения) - процедура <strong>опциональная</strong>, и
+направлена по большей части на <strong>улучшение UX</strong>, когда сначала у пользователя появляется экран с <strong>одним текстовым полем</strong>, и
+кнопкой &quot;Продолжить&quot;, после чего, в случае валидности кода - переход на экран с информацией о компании и <strong>двумя полями
+ввода</strong> (почты и пароля).</p>
 </article>
           </div>
           
@@ -137,7 +104,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/auth/sign_up.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -164,8 +131,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

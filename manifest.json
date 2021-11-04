@@ -17,11 +17,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/authorization_and_auth.md",
+      "source_relative_path": "api/articles/auth/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/authorization_and_auth.html",
-          "hash": "tAVW91glYMV9IDvPuqw/7A=="
+          "relative_path": "api/articles/auth/index.html",
+          "hash": "1HHEM7DLU4H7dqTsp4hAEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/auth/sign_up.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/auth/sign_up.html",
+          "hash": "kp4TWKmP5R3odYnJpq9IJg=="
         }
       },
       "is_incremental": false,
@@ -40,12 +52,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "332P3F+Ecmw14kkDTox8zA=="
+          "hash": "OKi24cRK6Pz1XvQR7wnSaQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +72,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "9imZLto8K0P7Z2tgr2LGZw=="
+          "hash": "0HvZDDu7yJb7q923J6sVYw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +117,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
