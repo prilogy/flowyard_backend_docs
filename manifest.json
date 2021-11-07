@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/index.html",
-          "hash": "1HHEM7DLU4H7dqTsp4hAEQ=="
+          "hash": "o1uRLmW55rVmSg89zYmJSw=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/sign_up.html",
-          "hash": "kp4TWKmP5R3odYnJpq9IJg=="
+          "hash": "geeVaDssBUe3LlLuFH7c3w=="
         }
       },
       "is_incremental": false,
