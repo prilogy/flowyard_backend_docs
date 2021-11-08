@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
+    <title>&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103; &#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1080;&#1081; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
+    <meta name="title" content="&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103; &#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1080;&#1081; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,68 +67,18 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="введение">Введение</h1>
+<h1 id="история-обновлений">История обновлений</h1>
 
-<p>Сервер придерживается RESTful архитектуры, тем не менее выполняет не все спецификации, поэтому является REST-Like.</p>
-<p>Авторизация проводится на основе схемы <a href="articles/auth/index.html"><strong>Bearer</strong></a></p>
-<h2 id="базовая-архитектура">Базовая архитектура</h2>
-<h3 id="restful-контроллер">RESTful контроллер</h3>
-<p>Или <strong>контроллеры ресуров</strong>, работают на основе одного интерфейса, и имеют сделующие эндпоинты</p>
-<table>
-<thead>
-<tr>
-<th>URI</th>
-<th>Тип запроса</th>
-<th>Действие</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>api/{v}/{resource}</code></td>
-<td><code>POST</code></td>
-<td>Создание</td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>PUT</code></td>
-<td><a href="articles/resources/getting-started/update.html">Редактирование</a></td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>PATCH</code></td>
-<td><a href="articles/resources/getting-started/update.html">Частичное редактирование</a></td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>DELETE</code></td>
-<td>Удаление</td>
-</tr>
-<tr>
-<td>[<code>api/{v}/{resource}</code></td>
-<td><code>GET</code></td>
-<td><a href="articles/resources/getting-started/get.html">Получение списка</a></td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>GET</code></td>
-<td>Получение одного</td>
-</tr>
-</tbody>
-</table>
-<p>Где параметры</p>
+<h2 id="v001">v0.0.1</h2>
+<h2 id="v000-05112021">v0.0.0 (05.11.2021)</h2>
 <ul>
-<li><p><code>{v}</code> - версия контроллера</p>
-</li>
-<li><p><code>{resource}</code> - название ресурса</p>
-</li>
-<li><p><code>{id}</code> - Id ресурса</p>
-</li>
+<li>Авторизация</li>
+<li>Аутентификация</li>
+<li>Регистрация</li>
+<li>Компании</li>
+<li>Пользователи</li>
+<li>Приглашения в компанию</li>
 </ul>
-<p>Описание каждого контроллера и эндпоинта API доступно в <a href="https://fly.prilogy.ru/swagger/index.html">Swagger UI</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Продолжение в разработке</p>
-</div>
 </article>
           </div>
           
@@ -137,7 +87,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/version-notes.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

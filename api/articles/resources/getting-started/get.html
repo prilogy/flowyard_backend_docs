@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
+    <title>&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077; &#1089;&#1087;&#1080;&#1089;&#1082;&#1072; &#1088;&#1077;&#1089;&#1091;&#1088;&#1089;&#1072; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
+    <meta name="title" content="&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077; &#1089;&#1087;&#1080;&#1089;&#1082;&#1072; &#1088;&#1077;&#1089;&#1091;&#1088;&#1089;&#1072; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,68 +67,45 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="введение">Введение</h1>
+<h2 id="получение-списка-ресурса">Получение списка ресурса</h2>
 
-<p>Сервер придерживается RESTful архитектуры, тем не менее выполняет не все спецификации, поэтому является REST-Like.</p>
-<p>Авторизация проводится на основе схемы <a href="articles/auth/index.html"><strong>Bearer</strong></a></p>
-<h2 id="базовая-архитектура">Базовая архитектура</h2>
-<h3 id="restful-контроллер">RESTful контроллер</h3>
-<p>Или <strong>контроллеры ресуров</strong>, работают на основе одного интерфейса, и имеют сделующие эндпоинты</p>
+<p>Запрос по пути <code>GET/ api/{v}/{resource}</code> имеет несколько особенностей</p>
+<h3 id="пагинация">Пагинация</h3>
+<p>Имеются следующие параметры:</p>
 <table>
 <thead>
 <tr>
-<th>URI</th>
-<th>Тип запроса</th>
-<th>Действие</th>
+<th>Название</th>
+<th>Значение по умолчанию</th>
+<th>Домен</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>api/{v}/{resource}</code></td>
-<td><code>POST</code></td>
-<td>Создание</td>
+<td><code>page</code></td>
+<td><code>1</code></td>
+<td><code>&gt;0</code></td>
+<td>Номер страницы</td>
 </tr>
 <tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>PUT</code></td>
-<td><a href="articles/resources/getting-started/update.html">Редактирование</a></td>
+<td><code>pageSize</code></td>
+<td><code>10</code></td>
+<td><code>&gt;0</code></td>
+<td>Размер страницы</td>
 </tr>
 <tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>PATCH</code></td>
-<td><a href="articles/resources/getting-started/update.html">Частичное редактирование</a></td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>DELETE</code></td>
-<td>Удаление</td>
-</tr>
-<tr>
-<td>[<code>api/{v}/{resource}</code></td>
-<td><code>GET</code></td>
-<td><a href="articles/resources/getting-started/get.html">Получение списка</a></td>
-</tr>
-<tr>
-<td><code>api/{v}/{resource}/{id}</code></td>
-<td><code>GET</code></td>
-<td>Получение одного</td>
+<td><code>orderByDate</code></td>
+<td><code>desc</code></td>
+<td><code>asc</code> / <code>desc</code></td>
+<td>Порядок выдачи. <br> <code>asc</code> возвращает объекты с id 1, 2, 3 (по порядку) <br> <code>desc</code> возвращает объекты с id 3, 2, 1 (в обратном порядке)</td>
 </tr>
 </tbody>
 </table>
-<p>Где параметры</p>
-<ul>
-<li><p><code>{v}</code> - версия контроллера</p>
-</li>
-<li><p><code>{resource}</code> - название ресурса</p>
-</li>
-<li><p><code>{id}</code> - Id ресурса</p>
-</li>
-</ul>
-<p>Описание каждого контроллера и эндпоинта API доступно в <a href="https://fly.prilogy.ru/swagger/index.html">Swagger UI</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Продолжение в разработке</p>
-</div>
+<p>Такие параметры передаются в <em>query string</em> URI запроса.</p>
+<h3 id="фильтрация">Фильтрация</h3>
+<p>В дополнение к параметрам пагинации могут идти параметры фильтра ресурса. У каждого ресурса может быть свой, уникальный фильтр.
+Параметры фильтров также задаются через <em>query string</em>. Подробная спецификация фильтров находится в Swagger.</p>
 </article>
           </div>
           
@@ -137,7 +114,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/getting-started/get.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -164,8 +141,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>

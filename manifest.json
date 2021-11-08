@@ -17,11 +17,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/auth/company-context.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/auth/company-context.html",
+          "hash": "74YfuwGFs/4yL7tT7YtC4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/auth/culture-context.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/auth/culture-context.html",
+          "hash": "iA+sBtade5FhxjBoKp24Pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/auth/index.md",
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/index.html",
-          "hash": "o1uRLmW55rVmSg89zYmJSw=="
+          "hash": "2CeRYc3iYWkn+yHnyY4OPw=="
         }
       },
       "is_incremental": false,
@@ -41,26 +65,59 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/index.md",
+      "source_relative_path": "api/articles/resources/company.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/resources/index.html",
-          "hash": "kRnmAEXsAT85u/wafayfWA=="
+          "relative_path": "api/articles/resources/company.html",
+          "hash": "5wishlcmUs+Er0SRrL263A=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/getting-started/get.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/getting-started/get.html",
+          "hash": "KA2GeBNed5Rnj/F2zIWPew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/getting-started/update.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/getting-started/update.html",
+          "hash": "uEu5A711lpnV0o6k2p8BJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/index.html",
+          "hash": "zgEF6b3tYlFS3sMf8N46Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "OKi24cRK6Pz1XvQR7wnSaQ=="
+          "hash": "jZgEnTWLonuoMsD28/7/mw=="
         }
       },
       "is_incremental": false,
@@ -72,7 +129,19 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0HvZDDu7yJb7q923J6sVYw=="
+          "hash": "PNj4OUbIjjSh+rBfZUWnEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/version-notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/version-notes.html",
+          "hash": "WQ0pc5de6TlbDlLz3Q2lFw=="
         }
       },
       "is_incremental": false,
@@ -84,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "yoQd7GoRvgrO0nAN5f5itA=="
+          "hash": "INwbkTNIvGB5cI+KzxD0fQ=="
         }
       },
       "is_incremental": false,
@@ -117,7 +186,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 6,
+          "total_file_count": 12,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
