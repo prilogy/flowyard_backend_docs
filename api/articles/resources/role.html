@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1050;&#1086;&#1085;&#1090;&#1077;&#1082;&#1089;&#1090; &#1083;&#1086;&#1082;&#1072;&#1083;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080; </title>
+    <title>&#1056;&#1086;&#1083;&#1100;/&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1103; (Role) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1050;&#1086;&#1085;&#1090;&#1077;&#1082;&#1089;&#1090; &#1083;&#1086;&#1082;&#1072;&#1083;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080; ">
+    <meta name="title" content="&#1056;&#1086;&#1083;&#1100;/&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1103; (Role) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -67,30 +67,40 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="контекст-локализации">Контекст локализации</h1>
+<h1 id="рольфункция-role">Роль/Функция (Role)</h1>
 
-<p>При помощи хедера <code>Culture</code> задается локализация приложения.</p>
-<p>Этому хедеру также соответствует свойство <code>user.currentCultureKey</code>, которое прикрепляется в результе аутентификации. Важно чтобы и хедер, и это свойство были синхронизированы.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Хедер <code>Culture</code> при действиях аутентификации должен быть прикреплен обязательно, иначе сервер ответит ошибкой.</p>
-</div>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Доступные локализации можно получить при помощи запроса <code>GET /api/{v}/helper/culture</code>.</p>
-</div>
-<h2 id="действия-при-смене-локализации">Действия при смене локализации</h2>
-<p>Инициатором смены локализации является клиент.</p>
-<p>Для смены текущего контекста компании нужно:</p>
-<ol>
-<li>Установить хедер <code>Culture</code> в значение ключа языка, на который происходит переключение.</li>
-<li>Сделать <strong>повторную аутентификацию</strong> с помощью <em>refresh-token</em>, который возвращает данные текущего контекста, где в <code>user.currentCultureKey</code> будет ожидаемым значение которое было установлено в хедер.</li>
-<li>В случае успеха нужно сбросить/обновить глобальное состояние приложения данными, полученными из запроса в шаге 2.</li>
-</ol>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Если указан несуществующий ключ языка - сервер вернет ошибку, таким образом, ранее установленный хедер нужно откатить на предыдущее значение.</p>
-</div>
+<p>Отображает функциональное назначение сотрудников, которые к ней прикреплены.</p>
+<h2 id="свойства">Свойства</h2>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>claims</code></td>
+<td><code>RoleClaim[]</code></td>
+<td></td>
+<td>Разрешения роли</td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td><code>User2Role[]</code></td>
+<td></td>
+<td>Пользователи роли</td>
+</tr>
+<tr>
+<td><code>userOwnerId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id владельца компании</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -99,7 +109,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/auth/culture-context.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/role.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
