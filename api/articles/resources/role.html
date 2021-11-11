@@ -101,6 +101,53 @@
 </tr>
 </tbody>
 </table>
+<h2 id="оргсхема">Оргсхема</h2>
+<p>Получить оргсхему можно по двум запросам:</p>
+<ul>
+<li><code>GET/ api/v1/role/orgchart/{id}/with-roles</code> - оргсхема с прикрепленными всеми ролями</li>
+<li><code>GET/ api/v1/role/orgchart/{id}</code> - только оргсхема</li>
+</ul>
+<p>Отрисовка оргсхемы происходит по модели <code>OrgchartItem?[][]</code>, которая является матрицой, где уже указано настоящее расположение карточек в схеме. Если элемент равен <code>null</code> - карточки на этом месте нет.</p>
+<h3 id="orgchartitem"><code>OrgchartItem</code></h3>
+<h4 id="свойства-1">Свойства</h4>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>roleId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id функции/роли</td>
+</tr>
+<tr>
+<td><code>parentRoleId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id родительской функции/роли</td>
+</tr>
+<tr>
+<td><code>connections</code></td>
+<td><code>OrgchartItemConnectionTypes[]</code></td>
+<td><code>&gt;0</code></td>
+<td>Список линий ,которые <strong>входят</strong> в карточку</td>
+</tr>
+</tbody>
+</table>
+<h5 id="orgchartitemconnectiontypes"><code>OrgchartItemConnectionTypes</code></h5>
+<p>Указывает на тип входящей линии.</p>
+<p>Является <code>enum</code>, и может иметь следующие значения:</p>
+<ul>
+<li><code>Top = 0</code> - линия заходит сверху</li>
+<li><code>Left = 1</code> - линия заходил слева</li>
+</ul>
+<p><img src="/assets/orgchart_top_left.png" alt="Пример линий"></p>
 </article>
           </div>
           

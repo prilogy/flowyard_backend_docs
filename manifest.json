@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/role.html",
-          "hash": "vam93d8O0iAvsFyczFRS5w=="
+          "hash": "7f64YEJrl+SLJ0bsNjHgLQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,18 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "4YuxmvNGLzG5sKhjIM97hw=="
+          "hash": "kAurk2/gdTlN9WDbmXpM1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/orgchart_top_left.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/orgchart_top_left.png"
         }
       },
       "is_incremental": false,
@@ -211,6 +222,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 14,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
