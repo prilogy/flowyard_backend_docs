@@ -129,9 +129,28 @@
 <p>Подробнее про статус коды авторизации <a href="articles/auth/index.html">здесь</a>.</p>
 <p>При получении негативных кодов (400, 403, 404) может быть возвращено 2 разных модели, в зависимости от режима работы сервера:</p>
 <ul>
-<li>В дебаг режиме - объект вида <code>{ message}</code>, где <code>message</code> - текст ошибки</li>
+<li>В дебаг режиме - объект вида <code>{ message }</code>, где <code>message</code> - текст ошибки</li>
 <li>В продакшен режиме - строка, т.е. все тело ответа будет строкой, которое можно вывести</li>
 </ul>
+<h4 id="валидация-форм">Валидация форм</h4>
+<p>При действиях <code>Create</code>, <code>Update</code>, <code>Delete</code> над ресурсом и ошибке валидации - сервер возвращает код <code>400</code> с моделью <code>{ errors, message }</code>, где:</p>
+<ul>
+<li><code>errors</code> - список объектов модели <code>{ propertyName: string, errorMessage: string }</code> (самые значимые свойства)</li>
+<li><code>message</code> - ошибка в виде текста, как и при остальных сценариях</li>
+</ul>
+<h5 id="пример-объекта-из-свойства-errors-данные-использовать-по-усмотрению">Пример объекта из свойства <code>errors</code>, данные использовать по усмотрению:</h5>
+<pre><code class="lang-json">{
+    &quot;propertyName&quot;: &quot;ParentRoleId&quot;,
+    &quot;errorMessage&quot;: &quot;Тут текст ошибки в локализованном виде&quot;,
+    &quot;attemptedValue&quot;: 0,
+    &quot;severity&quot;: 0,
+    &quot;errorCode&quot;: &quot;AsyncPredicateValidator&quot;,
+    &quot;formattedMessagePlaceholderValues&quot;: {
+        &quot;PropertyName&quot;: &quot;Parent Role Id&quot;,
+        &quot;PropertyValue&quot;: 0
+    }
+}
+</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Режим работы сервера можно получить с помощью запроса <code>GET/ api/v1/helper/info</code>, где в ответе в свойстве <code>.isDebugMode</code> будет и содержаться ответ на этот вопрос</p>
