@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
+    <title>&#1054;&#1088;&#1075;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1072; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
+    <meta name="title" content="&#1054;&#1088;&#1075;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1072; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -67,17 +67,55 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="ресурсы-и-модули--введение">Ресурсы и модули / Введение</h1>
+<h1 id="оргструктура">Оргструктура</h1>
 
-<p>Основным понятием любого RESTful API является ресурс.</p>
-<p><strong>Ресурс</strong> - это объект с типом, связанными данными, отношениями с
-другими ресурсами и набором методов, которые с ним работают. Он похож на экземпляр объекта в объектно-ориентированном
-языке программирования с тем важным отличием, что для ресурса определены чаще всего только несколько стандартных методов (
-соответствующих стандартным методам HTTP GET, POST, PUT, PATCH и DELETE), а экземпляр объекта обычно имеет много методов.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>В данном разделе будет приведена информация об особенностях конкретных ресурсов и модулей. Спецификация моделей находится в Swagger.</p>
-</div>
+<p>Получить оргсхему можно по двум запросам:</p>
+<ul>
+<li><code>GET/ api/v1/role/orgchart/{id}/with-roles</code> - оргструктура с прикрепленными всеми ролями</li>
+<li><code>GET/ api/v1/role/orgchart/{id}</code> - только оргструктура</li>
+</ul>
+<p>Отрисовка оргсхемы происходит по модели <code>OrgchartItem?[][]</code>, которая является матрицой, где уже указано настоящее расположение карточек в схеме. Если элемент равен <code>null</code> - карточки на этом месте нет.</p>
+<h2 id="orgchartitem"><code>OrgchartItem</code></h2>
+<p>Модель отвечающая за карточку оргструктуры</p>
+<h3 id="свойства">Свойства</h3>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>roleId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id функции/роли</td>
+</tr>
+<tr>
+<td><code>parentRoleId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id родительской функции/роли</td>
+</tr>
+<tr>
+<td><code>connections</code></td>
+<td><code>OrgchartItemConnectionTypes[]</code></td>
+<td></td>
+<td>Список линий ,которые <strong>входят</strong> в карточку</td>
+</tr>
+</tbody>
+</table>
+<h4 id="orgchartitemconnectiontypes"><code>OrgchartItemConnectionTypes</code></h4>
+<p>Перечисление, указывающее на тип <strong>входящей</strong> линии.</p>
+<p>Является <code>enum</code>, и может иметь следующие значения:</p>
+<ul>
+<li><code>Top = 0</code> - линия заходит сверху</li>
+<li><code>Left = 1</code> - линия заходил слева</li>
+</ul>
+<p><img src="/assets/orgchart_top_left.png" alt="Пример линий"></p>
 </article>
           </div>
           
@@ -86,7 +124,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/orgchart.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

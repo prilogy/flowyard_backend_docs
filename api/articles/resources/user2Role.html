@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
+    <title>&#1055;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100; &#1082; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080; (User2Role) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
+    <meta name="title" content="&#1055;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100; &#1082; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080; (User2Role) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -67,16 +67,54 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="ресурсы-и-модули--введение">Ресурсы и модули / Введение</h1>
+<h1 id="пользователь-к-функции-user2role">Пользователь к функции (<code>User2Role</code>)</h1>
 
-<p>Основным понятием любого RESTful API является ресурс.</p>
-<p><strong>Ресурс</strong> - это объект с типом, связанными данными, отношениями с
-другими ресурсами и набором методов, которые с ним работают. Он похож на экземпляр объекта в объектно-ориентированном
-языке программирования с тем важным отличием, что для ресурса определены чаще всего только несколько стандартных методов (
-соответствующих стандартным методам HTTP GET, POST, PUT, PATCH и DELETE), а экземпляр объекта обычно имеет много методов.</p>
+<p>С помощью это сущности осуществляется привязка пользователей к функции.</p>
+<h2 id="свойства">Свойства</h2>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UserId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id пользователя</td>
+</tr>
+<tr>
+<td><code>Type</code></td>
+<td><code>string</code></td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D1%81%D0%B2%D1%8F%D0%B7%D0%B8">Подробнее ниже</a></td>
+<td>Тип связи</td>
+</tr>
+<tr>
+<td><code>RoleId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Id функции</td>
+</tr>
+</tbody>
+</table>
 <div class="NOTE">
 <h5>Note</h5>
-<p>В данном разделе будет приведена информация об особенностях конкретных ресурсов и модулей. Спецификация моделей находится в Swagger.</p>
+<p>Одновременно может существовать только одна запись с одиаковой парой ключей <code>{ roleId, userId }</code>.</p>
+</div>
+<h2 id="типы-связи">Типы связи</h2>
+<p>Тип - строка.</p>
+<ul>
+<li><code>admin</code> - администратор</li>
+<li><code>executor_specialist</code> - исполнитель-специалист</li>
+<li><code>executor_trainee</code> - исполнитель-стажер</li>
+</ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Количество сотрудников каждого типа не ограничено. Может быть несколько администраторов и т.д.</p>
 </div>
 </article>
           </div>
@@ -86,7 +124,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/user2Role.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

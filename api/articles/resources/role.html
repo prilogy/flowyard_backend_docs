@@ -67,9 +67,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="рольфункция-role">Роль/Функция (Role)</h1>
+<h1 id="рольфункция-role">Роль/Функция (<code>Role</code>)</h1>
 
 <p>Отображает функциональное назначение сотрудников, которые к ней прикреплены.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Функция и роль в контексте системы это синоним.</p>
+</div>
 <h2 id="свойства">Свойства</h2>
 <table>
 <thead>
@@ -85,13 +89,13 @@
 <td><code>claims</code></td>
 <td><code>RoleClaim[]</code></td>
 <td></td>
-<td>Разрешения роли</td>
+<td>Разрешения</td>
 </tr>
 <tr>
 <td><code>users</code></td>
 <td><code>User2Role[]</code></td>
 <td></td>
-<td>Пользователи роли</td>
+<td>Сотрудники роли</td>
 </tr>
 <tr>
 <td><code>userOwnerId</code></td>
@@ -115,58 +119,13 @@
 </table>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Чтобы сервер сам рассчитал <code>order</code> при запросах создания/переноса, должно выполняться условие <code>order == 0</code></p>
+<p>Чтобы сервер сам рассчитал <code>order</code> при запросах создания/переноса, должно выполняться условие <code>order == 0</code>.</p>
 </div>
+<h2 id="сотрудники-функции">Сотрудники функции</h2>
+<p>Данные о сотрудниках хранятся в свойстве <code>users</code> в виде коллекции модели <a href="user2Role.html"><code>User2Role</code></a></p>
 <h2 id="изменение-порядка-дочерних-функций">Изменение порядка дочерних функций</h2>
-<p>Происходит при помощи запроса <code>POST/ api/v1/{id}/order</code>, где <code>{id}</code> - Id родительской функции по отношению к payload, переданному в <code>body</code> запроса.</p>
-<h2 id="оргструктура">Оргструктура</h2>
-<p>Получить оргсхему можно по двум запросам:</p>
-<ul>
-<li><code>GET/ api/v1/role/orgchart/{id}/with-roles</code> - оргструктура с прикрепленными всеми ролями</li>
-<li><code>GET/ api/v1/role/orgchart/{id}</code> - только оргструктура</li>
-</ul>
-<p>Отрисовка оргсхемы происходит по модели <code>OrgchartItem?[][]</code>, которая является матрицой, где уже указано настоящее расположение карточек в схеме. Если элемент равен <code>null</code> - карточки на этом месте нет.</p>
-<h3 id="orgchartitem"><code>OrgchartItem</code></h3>
-<p>Модель отвечающая за карточку оргструктуры</p>
-<h4 id="свойства-1">Свойства</h4>
-<table>
-<thead>
-<tr>
-<th>Свойство</th>
-<th>Тип</th>
-<th>Домен</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>roleId</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td>Id функции/роли</td>
-</tr>
-<tr>
-<td><code>parentRoleId</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td>Id родительской функции/роли</td>
-</tr>
-<tr>
-<td><code>connections</code></td>
-<td><code>OrgchartItemConnectionTypes[]</code></td>
-<td></td>
-<td>Список линий ,которые <strong>входят</strong> в карточку</td>
-</tr>
-</tbody>
-</table>
-<h5 id="orgchartitemconnectiontypes"><code>OrgchartItemConnectionTypes</code></h5>
-<p>Перечисление, указывающее на тип <strong>входящей</strong> линии.</p>
-<p>Является <code>enum</code>, и может иметь следующие значения:</p>
-<ul>
-<li><code>Top = 0</code> - линия заходит сверху</li>
-<li><code>Left = 1</code> - линия заходил слева</li>
-</ul>
-<p><img src="/assets/orgchart_top_left.png" alt="Пример линий"></p>
+<p>Происходит при помощи запроса <code>POST/ api/v1/{id}/order</code>, где <code>{id}</code> - Id родительской функции по отношению к payload,
+переданному в <code>body</code> запроса.</p>
 </article>
           </div>
           
