@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/menu.html",
-          "hash": "S9ivofBfIJSfYss+ys10WQ=="
+          "hash": "a3dOr4B28X+K/G2zszMDTg=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "lxDWzJcfXJy4VjFSlPyGsw=="
+          "hash": "E5QH0p2cm07u8aH/jqGa0A=="
         }
       },
       "is_incremental": false,
