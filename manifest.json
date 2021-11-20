@@ -53,18 +53,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/auth/menu.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/articles/auth/menu.html",
-          "hash": "1oLJwPYIuRIyRgVz3Ec2AQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "api/articles/auth/sign_up.md",
       "output": {
         ".html": {
@@ -77,11 +65,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/company.md",
+      "source_relative_path": "api/articles/modules/confirmation.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/resources/company.html",
-          "hash": "ctMjjusp1KV41AMqs0VBhA=="
+          "relative_path": "api/articles/modules/confirmation.html",
+          "hash": "U7oCV7mFMkBlS64vVSkY+A=="
         }
       },
       "is_incremental": false,
@@ -89,11 +77,47 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/confirmation.md",
+      "source_relative_path": "api/articles/modules/helper_methods.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/resources/confirmation.html",
-          "hash": "z+qpbcIhmwYlOTv6uFrqCg=="
+          "relative_path": "api/articles/modules/helper_methods.html",
+          "hash": "F7cHBXEh6St8QXv4ta9ZBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/menu.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/menu.html",
+          "hash": "Ll+04/w4mGhstPyFEvRr4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/orgchart.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/orgchart.html",
+          "hash": "WPyD3JbMDxN58bfjNornkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/company.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/company.html",
+          "hash": "ctMjjusp1KV41AMqs0VBhA=="
         }
       },
       "is_incremental": false,
@@ -137,23 +161,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/orgchart.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/articles/resources/orgchart.html",
-          "hash": "2POUMgGjHAInmoMUeDgvwA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/role.md",
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/role.html",
-          "hash": "kxVgAuF2d1/8BJHe+eFPQw=="
+          "hash": "YvsU2d2GelpbM1MudApnAw=="
         }
       },
       "is_incremental": false,
@@ -201,19 +213,22 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "x1rTSF0Mg0qAxynV98FrPg=="
+          "hash": "BjokEMDUAB3q4ZFNaYmCQQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "api/version-notes.md",
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "khr5FG2atk/xzMLzXGk7tQ=="
+          "hash": "audpzjqwG1+c74FHtfigAQ=="
         }
       },
       "is_incremental": false,
@@ -269,7 +284,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 18,
+          "total_file_count": 19,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

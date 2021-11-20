@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1055;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103; </title>
+    <title>&#1042;&#1089;&#1087;&#1086;&#1084;&#1086;&#1075;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1099; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1055;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103; ">
+    <meta name="title" content="&#1042;&#1089;&#1087;&#1086;&#1084;&#1086;&#1075;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1099; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -67,43 +67,73 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="подтверждения">Подтверждения</h1>
+<h1 id="вспомогательные-запросы">Вспомогательные запросы</h1>
 
-<p>Происходят по роуту <code>POST/ api/v1/confirmation</code>, с телом в виде модели <code>ConfirmationAttemptCommand</code>, где свойства:</p>
+<p>Все роуты находятся в контроллере по пути <code>api/v1/helper</code></p>
 <table>
 <thead>
 <tr>
-<th>Свойство</th>
-<th>Тип</th>
-<th>Домен</th>
+<th>Роут</th>
+<th>Тип запроса</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>code</code></td>
-<td><code>string</code></td>
-<td></td>
-<td>Код подтверждения (обычно полученный из сообщения на почте)</td>
+<td><code>/permission</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список разрешений</td>
 </tr>
 <tr>
-<td><code>type</code></td>
-<td><code>string</code></td>
-<td></td>
-<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">Тип подтверждения</a></td>
+<td><code>/culture</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список культур (не требует авторизацию)</td>
+</tr>
+<tr>
+<td><code>/timezone</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список таймзон</td>
+</tr>
+<tr>
+<td><code>/info</code></td>
+<td><code>GET</code></td>
+<td>Возвращает информацию о сервере</td>
 </tr>
 </tbody>
 </table>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Код не чувствителен к регистру.</p>
-</div>
-<h2 id="типы-подтверждения">Типы подтверждения</h2>
-<p>Перечисление, указывающее на тип подтверждения.</p>
-<p>Является <code>enum</code> и может иметь следующие значения:</p>
-<ul>
-<li><code>email_confirmation</code> - подтверждение почты</li>
-</ul>
+<h2 id="вспомогательные-запросы-issue">Вспомогательные запросы <code>issue</code></h2>
+<p>Все роуты находятся в контроллере по пути <code>api/v1/helper/issue</code></p>
+<table>
+<thead>
+<tr>
+<th>Роут</th>
+<th>Тип запроса</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/status-base</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список базовых статусов</td>
+</tr>
+<tr>
+<td><code>/status-action-base</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список базовых действий при статусе</td>
+</tr>
+<tr>
+<td><code>/status-transition-action-base</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список базовых действий при срабатывании перехода</td>
+</tr>
+<tr>
+<td><code>/status-action-rule-base</code></td>
+<td><code>GET</code></td>
+<td>Возвращает список базовых правил для действий</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -112,7 +142,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/confirmation.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/helper_methods.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
