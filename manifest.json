@@ -53,6 +53,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/auth/password-reset.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/auth/password-reset.html",
+          "hash": "BZxfrXFjP3EK6njTayw0EA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/auth/sign_up.md",
       "output": {
         ".html": {
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/getting-started/update.html",
-          "hash": "uEu5A711lpnV0o6k2p8BJQ=="
+          "hash": "h21zKoGHpsfGUYLXBEqcTA=="
         }
       },
       "is_incremental": false,
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "31vL/WGMDr3VEWAAHEkVmg=="
+          "hash": "PDFyUg8bYl9NkCIDGZn1MQ=="
         }
       },
       "is_incremental": false,
@@ -240,7 +252,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "bZooS/zi+rgUrpVlQoBjSw=="
+          "hash": "7vXB/9Jf5iMmaJww2dv6bA=="
         }
       },
       "is_incremental": false,
@@ -296,7 +308,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 20,
+          "total_file_count": 21,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
