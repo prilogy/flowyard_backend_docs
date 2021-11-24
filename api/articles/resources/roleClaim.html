@@ -101,6 +101,11 @@
 </div>
 <h2 id="типы-разрешений">Типы разрешений</h2>
 <p>Актуальные типы, вместе с их локализованными названиями приходят по запросу <code>GET/ api/v1/helper/permission</code> в виде модели <code>Permission</code>.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>У модели <code>Permission</code> есть свойство <code>.children</code>, в котором хранятся вложенные разрешения. Аналогично с моделью <code>MenuItemWithChildren</code></p>
+<p>Если для объекта модели <code>Permission</code> выполняется услвоие <code>.key == null</code> - он является разделителем, а при непустом свойстве <code>.children</code> - разделом.</p>
+</div>
 </article>
           </div>
           
