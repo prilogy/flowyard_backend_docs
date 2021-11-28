@@ -77,6 +77,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/communication/additional_params.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/communication/additional_params.html",
+          "hash": "G2B1c8IQEHVG4A3svqFdSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/communication/filter.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/communication/filter.html",
+          "hash": "TG9Uom6f3uFCEl1mT7DYsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/communication/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/communication/index.html",
+          "hash": "43Gp0IpC9g5Jv/oBSNWfTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/modules/confirmation.md",
       "output": {
         ".html": {
@@ -249,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FfYEEc90FEiujFM9zbx8Yw=="
+          "hash": "M824WyCa1U7O8g8HVyxSFw=="
         }
       },
       "is_incremental": false,
@@ -264,7 +300,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "LnGG+NZAtSycKm7U5H4hLA=="
+          "hash": "oT0LE3JPD9xrUAtbHDtMSg=="
         }
       },
       "is_incremental": false,
@@ -320,7 +356,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 25,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
