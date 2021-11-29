@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/index.html",
-          "hash": "WvcjtGgd4pkb59nEdROjIA=="
+          "hash": "NZfELVbNZbupNa8EaeJFZA=="
         }
       },
       "is_incremental": false,
@@ -233,6 +233,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/issue-history.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/issue-history.html",
+          "hash": "E97U4igJ/JO6JT8vjcM9rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/issue.md",
       "output": {
         ".html": {
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/user.html",
-          "hash": "qbN3EW4Vcp0iUYRQF+Swjw=="
+          "hash": "7g7AROui0YGfhzqXilYrUw=="
         }
       },
       "is_incremental": false,
@@ -309,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tpxnNQJX10p+wyRodcj8gA=="
+          "hash": "vxbEWZdv84BQD94vguBedw=="
         }
       },
       "is_incremental": false,
@@ -324,7 +336,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "zdloGH/qmQeZhAXLosIcyQ=="
+          "hash": "T/bIUF0WWF4+GD5jnVi7ZA=="
         }
       },
       "is_incremental": false,
@@ -380,7 +392,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 28,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
