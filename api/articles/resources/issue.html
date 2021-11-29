@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1060;&#1080;&#1083;&#1100;&#1090;&#1088; Issue </title>
+    <title>&#1055;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1072; (Issue) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1060;&#1080;&#1083;&#1100;&#1090;&#1088; Issue ">
+    <meta name="title" content="&#1055;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1072; (Issue) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../../index.html">
-                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,56 +67,81 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="фильтр-issue">Фильтр <code>Issue</code></h1>
+<h1 id="проблема-issue">Проблема (<code>Issue</code>)</h1>
 
+<p>Сущность отвечающая за сущность &quot;задачи&quot;, но учитывая что у нас также тип &quot;решение&quot; - название сущности - Issue, или же проблема.</p>
+<h2 id="свойства">Свойства</h2>
 <table>
 <thead>
 <tr>
 <th>Свойство</th>
 <th>Тип</th>
 <th>Домен</th>
-<th>Фильтрация по</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>boardId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td>Доске, к которой привязаны <code>Issue</code></td>
-</tr>
-<tr>
-<td><code>boardStatusId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td>Текущему статусу <code>Issue</code></td>
-</tr>
-<tr>
 <td><code>name</code></td>
-<td><code>string?</code></td>
+<td><code>string</code></td>
 <td></td>
-<td>Имени</td>
+<td>Название</td>
 </tr>
 <tr>
-<td><code>userRelation</code></td>
-<td><code>string?</code></td>
-<td>my / controlled / participated</td>
-<td>Отношению пользователя к <code>Issue</code>. Мои / На контроле / Участвую</td>
+<td><code>description</code></td>
+<td><code>string</code></td>
+<td></td>
+<td><a href="#%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8">Сотрудники функции</a></td>
 </tr>
 <tr>
-<td><code>executorUserId</code></td>
-<td><code>int?</code></td>
+<td><code>awaitedResult</code></td>
+<td><code>string</code></td>
 <td><code>&gt;0</code></td>
-<td>Исполнителю <code>Issue</code></td>
+<td>Номер функции по порядку среди дочерних относительно родительской</td>
 </tr>
 <tr>
 <td><code>createdByUserId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Цвет карточки</td>
+</tr>
+<tr>
+<td><code>executorUserId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>Содержит рассчитанные данные. Например список действий над функцией</td>
+</tr>
+<tr>
+<td><code>roleId</code></td>
 <td><code>int?</code></td>
 <td><code>&gt;0</code></td>
-<td>Создателю/отправителю <code>Issue</code></td>
+<td>Функция к которой привязана проблема</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>task / decision</td>
+<td>Тип. Задача / решение</td>
+</tr>
+<tr>
+<td><code>participants</code></td>
+<td><code>issueParticipant[]?</code></td>
+<td></td>
+<td>Список участников</td>
+</tr>
+<tr>
+<td><code>currentStatus</code></td>
+<td><code>issueStatus?</code></td>
+<td></td>
+<td>Текущий статус</td>
 </tr>
 </tbody>
 </table>
+<h2 id="типы-проблемы">Типы проблемы</h2>
+<ul>
+<li>task - задача</li>
+<li>decision - решение</li>
+</ul>
 </article>
           </div>
           
@@ -125,7 +150,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/filter.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/issue.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -152,8 +177,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

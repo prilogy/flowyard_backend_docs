@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1060;&#1080;&#1083;&#1100;&#1090;&#1088; Issue </title>
+    <title>&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1060;&#1080;&#1083;&#1100;&#1090;&#1088; Issue ">
+    <meta name="title" content="&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -67,56 +67,25 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="фильтр-issue">Фильтр <code>Issue</code></h1>
+<h1 id="ресурсы-и-модули--введение">Ресурсы и модули / Введение</h1>
 
-<table>
-<thead>
-<tr>
-<th>Свойство</th>
-<th>Тип</th>
-<th>Домен</th>
-<th>Фильтрация по</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>boardId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td>Доске, к которой привязаны <code>Issue</code></td>
-</tr>
-<tr>
-<td><code>boardStatusId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td>Текущему статусу <code>Issue</code></td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td><code>string?</code></td>
-<td></td>
-<td>Имени</td>
-</tr>
-<tr>
-<td><code>userRelation</code></td>
-<td><code>string?</code></td>
-<td>my / controlled / participated</td>
-<td>Отношению пользователя к <code>Issue</code>. Мои / На контроле / Участвую</td>
-</tr>
-<tr>
-<td><code>executorUserId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td>Исполнителю <code>Issue</code></td>
-</tr>
-<tr>
-<td><code>createdByUserId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td>Создателю/отправителю <code>Issue</code></td>
-</tr>
-</tbody>
-</table>
+<p>Основным понятием любого RESTful API является ресурс.</p>
+<p><strong>Ресурс</strong> - это объект с типом, связанными данными, отношениями с
+другими ресурсами и набором методов, которые с ним работают. Он похож на экземпляр объекта в объектно-ориентированном
+языке программирования с тем важным отличием, что для ресурса определены чаще всего только несколько стандартных методов (
+соответствующих стандартным методам HTTP GET, POST, PUT, PATCH и DELETE), а экземпляр объекта обычно имеет много методов.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>В данном разделе будет приведена информация об особенностях конкретных ресурсов и модулей. Спецификация моделей находится в Swagger.</p>
+</div>
+<h2 id="-базовые-и-часто-встречаемые-свойства">🆕 Базовые и часто встречаемые свойства</h2>
+<ul>
+<li><code>id</code> - Id</li>
+<li><code>dateCreated</code> - дата создания ресурса</li>
+<li><code>dateUpdated</code> - дата обновления ресурса</li>
+<li><code>createdByUserId</code> - Id пользователя, которым был создан ресурс</li>
+</ul>
+<p>Некоторые свойства могут быть скрыты в DTO, но присутсвуют в настоящей модели, поэтому по надобности их можно добавить в DTO.</p>
 </article>
           </div>
           
@@ -125,7 +94,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/filter.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/getting-started/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

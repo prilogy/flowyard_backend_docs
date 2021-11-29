@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; </title>
+    <title>FAQ </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1056;&#1077;&#1089;&#1091;&#1088;&#1089;&#1099; &#1080; &#1084;&#1086;&#1076;&#1091;&#1083;&#1080; / &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077; ">
+    <meta name="title" content="FAQ ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../index.html">
-                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,17 +67,18 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="ресурсы-и-модули--введение">Ресурсы и модули / Введение</h1>
+<h1 id="faq">FAQ</h1>
 
-<p>Основным понятием любого RESTful API является ресурс.</p>
-<p><strong>Ресурс</strong> - это объект с типом, связанными данными, отношениями с
-другими ресурсами и набором методов, которые с ним работают. Он похож на экземпляр объекта в объектно-ориентированном
-языке программирования с тем важным отличием, что для ресурса определены чаще всего только несколько стандартных методов (
-соответствующих стандартным методам HTTP GET, POST, PUT, PATCH и DELETE), а экземпляр объекта обычно имеет много методов.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>В данном разделе будет приведена информация об особенностях конкретных ресурсов и модулей. Спецификация моделей находится в Swagger.</p>
-</div>
+<h2 id="почему-issueпроблема-а-не-taskзадача">Почему <code>Issue</code>/Проблема а не <code>Task</code>/Задача?</h2>
+<p>В системе два типа коммуникаций - задачи и решения. Возможно расширение типов в дальнейшем. Поэтому выбрано более абстрактное название (прямо как в Jira).</p>
+<p>Также <code>Task</code> в C#, на котором пишется сервер является основным классом для работы с асинхронными операциями. Как <code>Promise</code> в js или <code>Future</code> в Dart.</p>
+<h2 id="boardstatus-и-issuestatus"><code>BoardStatus</code> и <code>IssueStatus</code>?</h2>
+<ul>
+<li><code>BoardStatus</code> - сущность, определяющая столбцы доски, столбец по совместительству является одним из возможных статусов <code>Issue</code>, т.к. она двигается по столбцам доски</li>
+<li><code>IssueStatus</code> - сущность, определяющая конкретный статус <code>Issue</code> на определенный момент времени. Сам статус указывается в <code>issueStatus.boardStatusId</code> в соответствии со столбцами доски</li>
+</ul>
+<h2 id="мои-на-контроле-участвую">Мои, на контроле, участвую?</h2>
+<p>Эти под-разделы доски на фронтенд приложениях являются лишь фильтром, выведенным для быстрого доступа. <a href="filter.html">Фильтр <code>Issue</code></a>.</p>
 </article>
           </div>
           
@@ -86,7 +87,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/faq.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -113,8 +114,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>

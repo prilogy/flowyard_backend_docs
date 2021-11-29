@@ -81,7 +81,19 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/additional_params.html",
-          "hash": "G2B1c8IQEHVG4A3svqFdSg=="
+          "hash": "mV3mx+DAwXJM93pjz0IIoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/communication/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/communication/faq.html",
+          "hash": "27S+mCF8aANrHU+CkzzmLQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/filter.html",
-          "hash": "TG9Uom6f3uFCEl1mT7DYsw=="
+          "hash": "Y+1TUKN867pyl/flLQzW4g=="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/index.html",
-          "hash": "43Gp0IpC9g5Jv/oBSNWfTQ=="
+          "hash": "WvcjtGgd4pkb59nEdROjIA=="
         }
       },
       "is_incremental": false,
@@ -197,6 +209,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/getting-started/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/getting-started/index.html",
+          "hash": "/yZNtEcn0VEfSPc69DYCog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/getting-started/update.md",
       "output": {
         ".html": {
@@ -209,11 +233,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/index.md",
+      "source_relative_path": "api/articles/resources/issue.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/resources/index.html",
-          "hash": "9EdGBeLcWOMP6JtPXYmnag=="
+          "relative_path": "api/articles/resources/issue.html",
+          "hash": "Y8QKw1k4vXLGM61k8znNdg=="
         }
       },
       "is_incremental": false,
@@ -285,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "M824WyCa1U7O8g8HVyxSFw=="
+          "hash": "tpxnNQJX10p+wyRodcj8gA=="
         }
       },
       "is_incremental": false,
@@ -300,7 +324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "oT0LE3JPD9xrUAtbHDtMSg=="
+          "hash": "zdloGH/qmQeZhAXLosIcyQ=="
         }
       },
       "is_incremental": false,
@@ -356,7 +380,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 25,
+          "total_file_count": 27,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
