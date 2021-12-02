@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueHistory) </title>
+    <title>&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1081; &#1082; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1077; (IssueComment) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueHistory) ">
+    <meta name="title" content="&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1081; &#1082; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1077; (IssueComment) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../index.html">
-                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,9 +67,66 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="история-проблемы-issuehistory">История проблемы (<code>IssueHistory</code>)</h1>
+<h2 id="комментарий-к-проблеме-issuecomment">Комментарий к проблеме (<code>IssueComment</code>)</h2>
 
-<p><strong>Раздел в разработке...</strong></p>
+<p>Для добавления нового комментария нужно создавать новую сущность <code>IssueHistory</code>, где в <code>issueHistory.comment</code> прикрепляется сам комментарий.</p>
+<h2 id="свойства">Свойства</h2>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Текст комментария</td>
+</tr>
+<tr>
+<td><code>attachments</code></td>
+<td><code>IssueCommentAttachment[]?</code></td>
+<td></td>
+<td></td>
+<td>Вложения (файлы) к комментарию. <a href="../static-file.html">Подробнее о статических файлах</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="вложение-комментария-issuecommentattachment">Вложение комментария (<code>IssueCommentAttachment</code>)</h3>
+<h3 id="свойства-1">Свойства</h3>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fileId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>Id статического файла</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td><code>int</code></td>
+<td><code>&gt;=0</code></td>
+<td>✅</td>
+<td>Порядок вложения при загрузке пользователем</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -78,7 +135,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/issue-history.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/issue-history/issue-comment.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -105,8 +162,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>
