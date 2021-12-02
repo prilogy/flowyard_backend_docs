@@ -69,7 +69,71 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="доказательство-проблемы-issueproof">Доказательство проблемы (<code>IssueProof</code>)</h1>
 
-<p><strong>Раздел в разработке...</strong></p>
+<p>С помощью этой сущности задаются правила проверки доказательства для проблемы.</p>
+<p>Если свойство <code>issue.proof</code> с этим типом равно <code>null</code> - доказательство не требуется.</p>
+<h2 id="свойства">Свойства</h2>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Текст к требованию доказательства</td>
+</tr>
+<tr>
+<td><code>rules</code></td>
+<td><code>IssueProofRule[]?</code></td>
+<td><code>size &gt; 0</code></td>
+<td>✅</td>
+<td>Правила к требованию доказательства</td>
+</tr>
+</tbody>
+</table>
+<h3 id="правило-issueproofrule">Правило (<code>IssueProofRule</code>)</h3>
+<p>С помощью этой сущности конкретно задаются требования к комметарию, чтобы он считался доказательством.</p>
+<h4 id="свойства-1">Свойства</h4>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>Числовое значение, связанное с правилом</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Ключ типа правила</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ключи-типов-правил">Ключи типов правил</h5>
+<ul>
+<li><code>require.text_min_length</code> - минимальное число символов текста комментария</li>
+<li><code>require.images_min_count</code> - минимальное число изображений, прикрепленных к комментарию</li>
+</ul>
 </article>
           </div>
           
