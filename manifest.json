@@ -280,24 +280,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "api/articles/resources/issue-history/index.md",
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue-history/index.html",
-          "hash": "Tpt34P9+sNPU29w2sl2lJw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/issue-history/issue-action.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/articles/resources/issue-history/issue-action.html",
-          "hash": "KwyM9GkxUZfLdci/Z9ex8A=="
+          "hash": "VwQx+hpX19mVYd8uKtbMUA=="
         }
       },
       "is_incremental": false,
@@ -310,6 +301,18 @@
         ".html": {
           "relative_path": "api/articles/resources/issue-history/issue-comment.html",
           "hash": "GtJ5bpsLRspRM5Lag79bag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/issue-history/issue-history-action.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/issue-history/issue-history-action.html",
+          "hash": "azE7uqk5KSvsArCTqHaG+Q=="
         }
       },
       "is_incremental": false,
@@ -429,7 +432,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "zBNi1y+fVpH5yFtlaEk6Jw=="
+          "hash": "uh3iBa849IdxXkhwrN6nbA=="
         }
       },
       "is_incremental": false,
@@ -444,7 +447,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "SHA5fjnYJQBNPADtlFyILw=="
+          "hash": "MFjv9GUKcL6wdSrEHnSOZw=="
         }
       },
       "is_incremental": false,
