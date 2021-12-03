@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1044;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099; Issue </title>
+    <title>&#1062;&#1074;&#1077;&#1090;&#1086;&#1074;&#1099;&#1077; &#1089;&#1093;&#1077;&#1084;&#1099; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1044;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099; Issue ">
+    <meta name="title" content="&#1062;&#1074;&#1077;&#1090;&#1086;&#1074;&#1099;&#1077; &#1089;&#1093;&#1077;&#1084;&#1099; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../../index.html">
-                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,42 +67,52 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="дополнительные-параметры-issue">Дополнительные параметры <code>Issue</code></h1>
+<h1 id="цветовые-схемы">Цветовые схемы</h1>
 
-<p>Дополнительные параметры, которые допоняют модель <code>Issue</code>, путем установки данных в свойство <code>issue.calculated</code> типа <code>IssueCalculated</code></p>
+<p>Цветовые схемы нужны для задания вида некоторого компонента с помощью ответа серера.</p>
+<p>При наличии в моделях свойство цветовой схемы имеет название <code>ColorSchemeKey</code>.</p>
+<h2 id="типы">Типы</h2>
 <table>
 <thead>
 <tr>
-<th>Свойство</th>
-<th>Тип</th>
-<th>Домен</th>
-<th>Фильтрация по</th>
+<th>Ключ</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>includeActions</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>Присоединяет доступные действия по пути <code>issue.calculated.actions</code> модели</td>
+<td>success</td>
+<td>Успех</td>
 </tr>
 <tr>
-<td><code>includeNextStatuses</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>Присоединяет доступные следующие статусы по пути <code>issue.calculated.nextStatuses</code> модели</td>
+<td>warning</td>
+<td>Предупреждение</td>
 </tr>
 <tr>
-<td><code>includeIndicators</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>Присоединяет индикаторы  по пути<code>issue.calculated.indicators</code> модели</td>
+<td>error</td>
+<td>Ошибка</td>
+</tr>
+<tr>
+<td>primary</td>
+<td>Первичный цвет</td>
+</tr>
+<tr>
+<td>secondary</td>
+<td>Вторичный цвет</td>
+</tr>
+<tr>
+<td>dark</td>
+<td>Темный</td>
+</tr>
+<tr>
+<td>faint</td>
+<td>Светлый</td>
 </tr>
 </tbody>
 </table>
 <div class="NOTE">
 <h5>Note</h5>
-<p>🆕 Объект <code>IssueCalucated</code> можно получить по отдельному роуту <code>{id}/calculated</code> контроллера <code>Issue</code>, где используются эти же доп. параметры для конфигруации возвращаемых данных.</p>
+<p>Под каждый ключ на фронтенде создается объект с цветами, которые можно применить к оформлению компонента.</p>
 </div>
 </article>
           </div>
@@ -112,7 +122,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/additional_params.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/color-scheme.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -139,8 +149,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

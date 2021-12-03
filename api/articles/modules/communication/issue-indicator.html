@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1044;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099; Issue </title>
+    <title>&#1048;&#1085;&#1076;&#1080;&#1082;&#1072;&#1090;&#1086;&#1088; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueIndicator) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1044;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1099; Issue ">
+    <meta name="title" content="&#1048;&#1085;&#1076;&#1080;&#1082;&#1072;&#1090;&#1086;&#1088; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueIndicator) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -67,42 +67,39 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="дополнительные-параметры-issue">Дополнительные параметры <code>Issue</code></h1>
+<h1 id="индикатор-проблемы-issueindicator">Индикатор проблемы (<code>IssueIndicator</code>)</h1>
 
-<p>Дополнительные параметры, которые допоняют модель <code>Issue</code>, путем установки данных в свойство <code>issue.calculated</code> типа <code>IssueCalculated</code></p>
+<p>Позволяет вывести вспомогательную информацию о задаче, например её нарушения.</p>
+<h1 id="свойства">Свойства</h1>
 <table>
 <thead>
 <tr>
 <th>Свойство</th>
 <th>Тип</th>
-<th>Домен</th>
-<th>Фильтрация по</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>includeActions</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>Присоединяет доступные действия по пути <code>issue.calculated.actions</code> модели</td>
+<td><code>name</code></td>
+<td><code>string?</code></td>
+<td>Текст, выводимый внутри индикатора</td>
 </tr>
 <tr>
-<td><code>includeNextStatuses</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>Присоединяет доступные следующие статусы по пути <code>issue.calculated.nextStatuses</code> модели</td>
+<td><code>key</code></td>
+<td><code>string</code></td>
+<td>Ключ индикатора. (не требует доп. обработки)</td>
 </tr>
 <tr>
-<td><code>includeIndicators</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>Присоединяет индикаторы  по пути<code>issue.calculated.indicators</code> модели</td>
+<td><code>colorSchemeKey</code></td>
+<td><code>string</code></td>
+<td>Ключ цветовой схемы, с которой нужно отображать индикатор</td>
 </tr>
 </tbody>
 </table>
-<div class="NOTE">
-<h5>Note</h5>
-<p>🆕 Объект <code>IssueCalucated</code> можно получить по отдельному роуту <code>{id}/calculated</code> контроллера <code>Issue</code>, где используются эти же доп. параметры для конфигруации возвращаемых данных.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Индикаторы автоматически крепятся ко всем моделям типа <code>IssueShort</code> в свойстве <code>issueShort.calculated.indicators</code>. Для включения в модель <code>Issue</code> - нужно использовать доп. параметр <code>includeIndicators</code>.</p>
 </div>
 </article>
           </div>
@@ -112,7 +109,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/additional_params.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/issue-indicator.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
