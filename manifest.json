@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/company-context.html",
-          "hash": "A8HEEeBM4Nm562W38qXECw=="
+          "hash": "jcjqTmW4DmLdXiIUQVZMPw=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/culture-context.html",
-          "hash": "hVYDcoxWuEZ3FqUny2/tiA=="
+          "hash": "Pmqtz4MTOcLbKX9KwhVEJQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/auth/index.html",
-          "hash": "2CeRYc3iYWkn+yHnyY4OPw=="
+          "hash": "m+ulJ/8Qsq8c2/dWf491WA=="
         }
       },
       "is_incremental": false,
@@ -58,6 +58,18 @@
         ".html": {
           "relative_path": "api/articles/auth/password-reset.html",
           "hash": "BZxfrXFjP3EK6njTayw0EA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/auth/platform-context.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/auth/platform-context.html",
+          "hash": "vXf4G/Mo49vjMGz0Z/XiDQ=="
         }
       },
       "is_incremental": false,
@@ -432,7 +444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "uh3iBa849IdxXkhwrN6nbA=="
+          "hash": "pMc37Mdb5OoHdt2Oybo59A=="
         }
       },
       "is_incremental": false,
@@ -447,7 +459,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "MFjv9GUKcL6wdSrEHnSOZw=="
+          "hash": "SjeRp23ITXWvQ5OIMH40jw=="
         }
       },
       "is_incremental": false,
@@ -503,7 +515,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 37,
+          "total_file_count": 38,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
