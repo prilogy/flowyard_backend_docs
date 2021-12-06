@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Realtime </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Realtime ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="realtime">Realtime</h1>
+
+<p>Работа в реальном времени.</p>
+<h2 id="флоу">Флоу</h2>
+<h3 id="1-подключение-к-хабу-signalr">1. Подключение к хабу SignalR</h3>
+<p>Подключение к хабу происходит по пути <code>api/v1/hub/issue</code> при помощи фронтенд SignalR клиента.</p>
+<p>При подключении передавать query string параметр <code>access_token</code> равный JWT токену (без <code>Bearer </code> префикса)</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Хаб - своеобразное простанство имен для SignalR.</p>
+</div>
+<h3 id="2-установка-id-текущей-доски">2. Установка Id текущей доски</h3>
+<p>После подключения к SignalR хабу отправить сообщение с именем <code>SetCurrentBoardId</code> с одним агрументом типа <code>int</code> - id
+текущей доски</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Также слать это сообщение каждый раз при смене доски (на текущий момент смены доски нет).</p>
+</div>
+<h3 id="3-обработка-сообщения">3. Обработка сообщения</h3>
+<p>После успешных проделанных действий клиент будет получать уведомления об изменениях на доске.</p>
+<p><strong>Сообщение имеет имя <code>IssueUpdate</code>.</strong></p>
+<p>Сообщение передает модель типа <code>IssueUpdateMessage</code>.</p>
+<h4 id="свойства-issueupdatemessage">Свойства <code>IssueUpdateMessage</code></h4>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Описание</th>
+<th>Обработка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boardId</code></td>
+<td><code>int</code></td>
+<td>Id доски для которой актуально обновление</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>updatedBoardStatusIds</code></td>
+<td><code>int[]</code></td>
+<td>Id <code>BoardStatus</code>(колонок доски)</td>
+<td>Если колонка(-и) с id из свойства в поле зрения - перезапустить пагинацию для этих колонок. Иначе сбросить пагинацию чтобы при следующем входе она запросилась заново</td>
+</tr>
+<tr>
+<td><code>issueId</code></td>
+<td><code>int</code></td>
+<td>Id <code>Issue</code></td>
+<td>Если <code>Issue</code> с этим Id в поле зрения - перезагрузить всю информацию о ней</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>Тип обновления</td>
+<td>По усмотрению в целях оптимизации. <a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9">Типы обновлений</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="типы-обновлений">Типы обновлений</h5>
+<ul>
+<li>issue.added - <code>Issue</code> добавлена</li>
+<li>issue.updated - <code>Issue</code> обновлена</li>
+<li>issue.deleted - <code>Issue</code> удалена</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/realtime.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
