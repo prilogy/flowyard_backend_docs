@@ -154,39 +154,35 @@
 <td>Текущий статус</td>
 </tr>
 <tr>
-<td>🆕 <code>proofRequirement</code></td>
+<td><code>proofRequirement</code></td>
 <td><code>IssueProof?</code></td>
 <td></td>
 <td></td>
 <td>Требование к доказательству</td>
 </tr>
 <tr>
-<td>🆕 <code>proofCommentId</code></td>
+<td><code>proofCommentId</code></td>
 <td><code>int?</code></td>
 <td></td>
 <td></td>
 <td>Id комментария - доказательства</td>
 </tr>
 <tr>
-<td>🆕 <code>dateDeadline</code></td>
+<td><code>dateDeadline</code></td>
 <td><code>DateTime?</code></td>
 <td></td>
 <td></td>
 <td>Срок</td>
 </tr>
 <tr>
-<td>🆕 <code>isStrictDeadline</code></td>
-<td><code>DateTime?</code></td>
+<td>🆕 <code>fields</code></td>
+<td><code>IssueCustomField[]</code></td>
 <td></td>
-<td></td>
-<td>Строгий крайний срок (<code>true</code> == строгий)</td>
+<td>✅</td>
+<td><a href="issue-custom-field.html">Кастомные поля <code>Issue</code></a></td>
 </tr>
 </tbody>
 </table>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>🆕 Обязательными при создании/редактировании являются свойства <code>name</code>, <code>executorUserId</code></p>
-</div>
 <h2 id="типы-проблемы">Типы проблемы</h2>
 <ul>
 <li>task - задача</li>
@@ -196,7 +192,7 @@
 <p>Упрощенная модель <code>Issue</code> для более быстрых и легких запросов. Со спецификацией можно ознакомиться в Swagger.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Для этой модели есть отдельный контроллер <code>IssueShort</code> для запросов.</p>
+<p>Для этой модели есть отдельный контроллер <code>IssueShort</code>.</p>
 </div>
 </article>
           </div>
