@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#1050;&#1072;&#1089;&#1090;&#1086;&#1084;&#1085;&#1086;&#1077; &#1087;&#1086;&#1083;&#1077; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; Issue (IssueCustomField) </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#1050;&#1072;&#1089;&#1090;&#1086;&#1084;&#1085;&#1086;&#1077; &#1087;&#1086;&#1083;&#1077; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; Issue (IssueCustomField) ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="кастомное-поле-проблемы-issue-issuecustomfield">Кастомное поле проблемы <code>Issue</code> (<code>IssueCustomField</code>)</h1>
+
+<p>Сущность нужна для установки кастомных полей <code>Issue</code> разных типов.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Получить список кастомных полей с их типами можно через роут <code>GET/ issue/custom-field</code> контроллера <code>Helper</code>.</p>
+</div>
+<h2 id="свойства">Свойства</h2>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>issueId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td></td>
+<td>Id <code>Issue</code> (прикрепляется автоматически если вложен в <code>Issue</code>)</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Ключ кастомного свойства</td>
+</tr>
+<tr>
+<td><code>valueType</code></td>
+<td><code>string</code></td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B9-%D0%B8-%D1%81%D0%BE%D0%BE%D1%82%D0%B2%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D1%8F%D0%BC">Типы полей</a></td>
+<td>✅</td>
+<td>Тип поля</td>
+</tr>
+</tbody>
+</table>
+<p>А также свойства ниже:</p>
+<h2 id="типы-полей-и-соотвествие-полям">Типы полей и соотвествие полям</h2>
+<p>Ключ указывается в свойстве <code>issueCustomField.valueType</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Ключ</th>
+<th>Тип</th>
+<th>Поле в <code>IssueCustomField</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td><code>bool</code></td>
+<td><code>valueBool</code></td>
+</tr>
+<tr>
+<td>string</td>
+<td><code>string</code></td>
+<td><code>valueString</code></td>
+</tr>
+<tr>
+<td>int</td>
+<td><code>int</code></td>
+<td><code>valueInt</code></td>
+</tr>
+<tr>
+<td>dateTime</td>
+<td><code>DateTime</code></td>
+<td><code>valueDateTime</code></td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>При несоответсвии типа и указанного свойства сервер вернет ошибку.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Сейчас используются только поля типа <code>bool</code>.</p>
+</div>
+<h2 id="флоу">Флоу</h2>
+<ol>
+<li>Получаем все виды кастомных свойств по роуту <code>GET/ issue/custom-field</code> контроллера <code>Helper</code>. <br> Сохраняем их в глобальный стейт, и в следующий раз из него же берем, без повторного запроса</li>
+<li>Сопоставляем объекты коллекции <code>issue.fields</code> с полученными данными в пункте 1. по ключу (<code>key</code>) и отображаем интерфейс с полученным текстом и контролом, сопоставленным по типу поля</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/issue-custom-field.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
