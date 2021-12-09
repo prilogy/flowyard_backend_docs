@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#1055;&#1086;&#1074;&#1090;&#1086;&#1088;&#1103;&#1102;&#1097;&#1072;&#1103;&#1089;&#1103; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1072; (RecurringIssue) </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#1055;&#1086;&#1074;&#1090;&#1086;&#1088;&#1103;&#1102;&#1097;&#1072;&#1103;&#1089;&#1103; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1072; (RecurringIssue) ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="повторяющаяся-проблема-recurringissue">Повторяющаяся проблема (<code>RecurringIssue</code>)</h1>
+
+<p>Проблема которая автоматически создается (повторяется) по заданным правилам.</p>
+<h2 id="свойства">Свойства</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Чтобы таблица умещалась без скролла, названия некоторых свойств перенесены на вторую строку двумя точками</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Название</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Описание</td>
+</tr>
+<tr>
+<td><code>awaitedResult</code></td>
+<td><code>string</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>ЦКП</td>
+</tr>
+<tr>
+<td><code>boardId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>Id доски</td>
+</tr>
+<tr>
+<td><code>createdOnRoleId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>Id функции, на которой создана сущность</td>
+</tr>
+<tr>
+<td><code>createdByUserId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td></td>
+<td>Id пользователя - создателя</td>
+</tr>
+<tr>
+<td><code>issueType</code></td>
+<td><code>string</code></td>
+<td>task / decision</td>
+<td>✅</td>
+<td>Тип генерируемых проблем. Задача / решение</td>
+</tr>
+<tr>
+<td><code>isPaused</code></td>
+<td><code>bool</code></td>
+<td></td>
+<td></td>
+<td>Пауза. Если <code>true</code> - повт. проблема на паузе</td>
+</tr>
+<tr>
+<td><code>proofRequirement</code></td>
+<td><code>RecurringIssueProof?</code></td>
+<td></td>
+<td></td>
+<td>Требование к доказательству</td>
+</tr>
+<tr>
+<td><code>executorConfigs</code></td>
+<td><code>RecurringIssue..</code><br><code>ExecutorConfig[]</code></td>
+<td></td>
+<td>✅</td>
+<td><a href="recurring-issue-executor-config.html">Конфиг исполнителей</a></td>
+</tr>
+<tr>
+<td><code>rules</code></td>
+<td><code>RecurringIssueRule[]</code></td>
+<td></td>
+<td>✅</td>
+<td><a href="recurring-issue-rule.html">Правила</a></td>
+</tr>
+<tr>
+<td><code>fields</code></td>
+<td><code>RecurringIssueCustomField[]</code></td>
+<td></td>
+<td>✅</td>
+<td><a href="recurring-issue-custom-field.html">Кастомные поля</a></td>
+</tr>
+<tr>
+<td><code>dateStart</code></td>
+<td><code>DateTime?</code></td>
+<td></td>
+<td></td>
+<td>Дата начала повт. проблемы</td>
+</tr>
+<tr>
+<td><code>createOnWeekends</code></td>
+<td><code>bool</code></td>
+<td></td>
+<td>✅</td>
+<td>Создавать по выходным и праздникам</td>
+</tr>
+<tr>
+<td><code>dateDeadlineAfterTime</code></td>
+<td><code>string?</code></td>
+<td>*</td>
+<td>✅ **</td>
+<td>Указывает время, через которое будет установлен срок, относительно даты создания</td>
+</tr>
+<tr>
+<td><code>dateDeadlineUntil</code></td>
+<td><code>RecurringIssueDate..</code><br><code>DeadlineConfigUntilDto?</code></td>
+<td></td>
+<td>✅ **</td>
+<td><a href="recurring-issue-date-deadline-config-until.html">Конфиг срока &quot;до дня недели&quot;</a></td>
+</tr>
+<tr>
+<td><code>senderType</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB-%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%D0%B0-%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8F">Тип правила</a> подбора отправителя проблемы</td>
+</tr>
+<tr>
+<td><code>senderRoleId</code></td>
+<td><code>int?</code></td>
+<td></td>
+<td></td>
+<td>Id функции если того требует <code>senderType</code></td>
+</tr>
+<tr>
+<td><code>dateCreatedOnTimezoneType</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB-%D1%82%D0%B0%D0%B9%D0%BC%D0%B7%D0%BE%D0%BD%D1%8B">Тип правила</a> для использования таймзоны при создании проблемы</td>
+</tr>
+</tbody>
+</table>
+<p><code>*</code> - формат <code>months.days.hours:minutes</code>, все параметры обязательны, даже если равны 0</p>
+<p><code>**</code> - обязательно указание только одного из этих свойств</p>
+<h2 id="типы-правил-подбора-отправителя">Типы правил подбора отправителя</h2>
+<ul>
+<li>nearest_admin - ближайший руководитель</li>
+<li>executor_of_role - исполнитель функции (обязательно указание свойства <code>senderRoleId</code>)</li>
+<li>admin_of_role - руководитель функции (обязательно указание свойства <code>senderRoleId</code>)</li>
+</ul>
+<h2 id="типы-правил-таймзоны">Типы правил таймзоны</h2>
+<ul>
+<li>of_executor - таймзона исполнителя</li>
+<li>of_creator - таймзона отправителя</li>
+<li>of_company - таймзона компании</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/recurring-issue/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

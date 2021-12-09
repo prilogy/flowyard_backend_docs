@@ -5,18 +5,18 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1044;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1086; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueProof) </title>
+    <title>&#1050;&#1086;&#1085;&#1092;&#1080;&#1075; &#1080;&#1089;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1077;&#1081; &#1087;&#1086;&#1074;&#1090;&#1086;&#1088;&#1103;&#1102;&#1097;&#1077;&#1081;&#1089;&#1103; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (RecurringIssueExecutorConfig) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1044;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1086; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueProof) ">
+    <meta name="title" content="&#1050;&#1086;&#1085;&#1092;&#1080;&#1075; &#1080;&#1089;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1077;&#1081; &#1087;&#1086;&#1074;&#1090;&#1086;&#1088;&#1103;&#1102;&#1097;&#1077;&#1081;&#1089;&#1103; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (RecurringIssueExecutorConfig) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
     
     
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../index.html">
-                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,10 +67,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="доказательство-проблемы-issueproof">Доказательство проблемы (<code>IssueProof</code>)</h1>
+<h1 id="конфиг-исполнителей-повторяющейся-проблемы-recurringissueexecutorconfig">Конфиг исполнителей повторяющейся проблемы (<code>RecurringIssueExecutorConfig</code>)</h1>
 
-<p>С помощью этой сущности задаются правила проверки доказательства для проблемы.</p>
-<p>Если свойство <code>issue.proof</code> с этим типом равно <code>null</code> - доказательство не требуется.</p>
+<p>Задает правила для подбора исполнителей на повторяющуюся проблему.</p>
 <h2 id="свойства">Свойства</h2>
 <table>
 <thead>
@@ -84,56 +83,36 @@
 </thead>
 <tbody>
 <tr>
-<td><code>text</code></td>
+<td><code>type</code></td>
 <td><code>string</code></td>
 <td></td>
 <td>✅</td>
-<td>Текст к требованию доказательства</td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%B0">Тип конфига</a></td>
 </tr>
 <tr>
-<td><code>rules</code></td>
-<td><code>IssueProofRule[]?</code></td>
-<td><code>size &gt; 0</code></td>
-<td>✅</td>
-<td>Правила к требованию доказательства</td>
-</tr>
-</tbody>
-</table>
-<h3 id="правило-issueproofrule">Правило (<code>IssueProofRule</code>)</h3>
-<p>С помощью этой сущности конкретно задаются требования к комметарию, чтобы он считался доказательством.</p>
-<h4 id="свойства-1">Свойства</h4>
-<table>
-<thead>
-<tr>
-<th>Свойство</th>
-<th>Тип</th>
-<th>Домен</th>
-<th>Req.</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>value</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td>✅</td>
-<td>Числовое значение, связанное с правилом</td>
+<td><code>roleId</code></td>
+<td><code>int?</code></td>
+<td></td>
+<td></td>
+<td>Id функции, если этого требует тип конфига</td>
 </tr>
 <tr>
-<td><code>key</code></td>
-<td><code>string</code></td>
+<td><code>isExcluded</code></td>
+<td><code>bool</code></td>
 <td></td>
 <td>✅</td>
-<td>Ключ типа правила</td>
+<td>Реализует функционал &quot;кроме&quot; если <code>true</code></td>
 </tr>
 </tbody>
 </table>
-<h5 id="ключи-типов-правил">Ключи типов правил</h5>
+<h2 id="типы-конфига">Типы конфига</h2>
 <ul>
-<li><code>require.text_min_length</code> - минимальное число символов текста комментария</li>
-<li><code>require.images_min_count</code> - минимальное число изображений, прикрепленных к комментарию</li>
+<li>all - все</li>
+<li>all_admins - все администраторы</li>
+<li>role_executors - исполнители функции *</li>
+<li>role_admins - руководители функции *</li>
 </ul>
+<p><code>*</code> - обязательно указание свойства <code>roleId</code></p>
 </article>
           </div>
           
@@ -142,7 +121,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/issue-proof.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/recurring-issue/recurring-issue-executor-config.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -169,8 +148,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>

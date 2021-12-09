@@ -156,7 +156,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/index.html",
-          "hash": "BlMyHvc+vGYjKkdntBCtvA=="
+          "hash": "YQpxh1Y1AdbbgPpexK9V4Q=="
         }
       },
       "is_incremental": false,
@@ -307,18 +307,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/issue-custom-field.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/articles/resources/issue-custom-field.html",
-          "hash": "g9UoXunpZnVfGwTM5zutWQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -371,11 +359,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/issue-proof.md",
+      "source_relative_path": "api/articles/resources/issue/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/resources/issue-proof.html",
-          "hash": "bUQPqoV9kfRDU0yjRR1LaA=="
+          "relative_path": "api/articles/resources/issue/index.html",
+          "hash": "x8iJMLLvalp3J5JuUyHWCA=="
         }
       },
       "is_incremental": false,
@@ -383,11 +371,95 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "api/articles/resources/issue.md",
+      "source_relative_path": "api/articles/resources/issue/issue-custom-field.md",
       "output": {
         ".html": {
-          "relative_path": "api/articles/resources/issue.html",
-          "hash": "eRSECW0sZYEXHHqRYenluw=="
+          "relative_path": "api/articles/resources/issue/issue-custom-field.html",
+          "hash": "DnJwcGJjNYIPCh3M0ZWiXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/issue/issue-proof.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/issue/issue-proof.html",
+          "hash": "EEPyua0dHJuXsu7REb03Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/recurring-issue/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/recurring-issue/index.html",
+          "hash": "3pB+ktJgaxRzvY+Es6DvRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/recurring-issue/recurring-issue-custom-field.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/recurring-issue/recurring-issue-custom-field.html",
+          "hash": "TOvV1I852RSvDX5WcOTGlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/recurring-issue/recurring-issue-date-deadline-config-until.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/recurring-issue/recurring-issue-date-deadline-config-until.html",
+          "hash": "9Mp9ixzqT6Ia1UMdxRAdOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/recurring-issue/recurring-issue-executor-config.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/recurring-issue/recurring-issue-executor-config.html",
+          "hash": "0JOQiwNndBW6hOs7i0hqIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/recurring-issue/recurring-issue-proof.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/recurring-issue/recurring-issue-proof.html",
+          "hash": "zjv+VYpqp2fG2dLdLRdLBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/recurring-issue/recurring-issue-rule.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/recurring-issue/recurring-issue-rule.html",
+          "hash": "m//RY5JhWYC1YwZGEcafZw=="
         }
       },
       "is_incremental": false,
@@ -466,12 +538,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tbZEm6x5a9URVmBrh1UmUA=="
+          "hash": "GnZky9UH8JyklmZzo+U1+A=="
         }
       },
       "is_incremental": false,
@@ -486,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "sRDuzkVQMyQ1jOmIOT/GkA=="
+          "hash": "jp2CQ+S8RgzHHy2c9+XSTQ=="
         }
       },
       "is_incremental": false,
@@ -542,7 +617,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 40,
+          "total_file_count": 46,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
