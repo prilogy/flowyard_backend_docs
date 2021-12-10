@@ -363,7 +363,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue/index.html",
-          "hash": "vN9j9nmKdbIxSQi2xnbeWA=="
+          "hash": "ldY3TV4BD9pPDLeHCCPFbA=="
         }
       },
       "is_incremental": false,
@@ -399,19 +399,22 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/recurring-issue/index.html",
-          "hash": "3pB+ktJgaxRzvY+Es6DvRA=="
+          "hash": "E3sSaK/1K9EiCXJMrD5R1w=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "api/articles/resources/recurring-issue/recurring-issue-custom-field.md",
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/recurring-issue/recurring-issue-custom-field.html",
-          "hash": "TOvV1I852RSvDX5WcOTGlw=="
+          "hash": "1BD8Ya3vkWk0/gCWbuXj7w=="
         }
       },
       "is_incremental": false,
@@ -447,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/recurring-issue/recurring-issue-proof.html",
-          "hash": "zjv+VYpqp2fG2dLdLRdLBA=="
+          "hash": "aoC2qOXmTWrJmleuiHhZrA=="
         }
       },
       "is_incremental": false,
@@ -543,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "El54Hr5lTHackF3a9vLeTA=="
+          "hash": "uKYqxKFsQm/epC4oOQvpcg=="
         }
       },
       "is_incremental": false,
@@ -558,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "86A7zsVfbtKlLyhgsu+WTg=="
+          "hash": "4agN8yKi1qMYhlx5KoZJFA=="
         }
       },
       "is_incremental": false,
