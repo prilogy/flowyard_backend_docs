@@ -212,6 +212,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/docs.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/docs.html",
+          "hash": "0KdS5mOitQ+Uv5Radp5WLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/modules/helper_methods.md",
       "output": {
         ".html": {
@@ -546,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "uKYqxKFsQm/epC4oOQvpcg=="
+          "hash": "ub3vxha3dJUxX9kH5QqBAA=="
         }
       },
       "is_incremental": false,
@@ -561,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "6lqF4AN3u8aJPISpBDBWpw=="
+          "hash": "ZDrROcYxp4R5Ynw8Pp1Dmg=="
         }
       },
       "is_incremental": false,
@@ -617,7 +629,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 46,
+          "total_file_count": 47,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
