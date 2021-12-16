@@ -168,7 +168,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/issue-indicator.html",
-          "hash": "ItxzGvKPoaof3LWu+WSCIQ=="
+          "hash": "7TvQ/2g3m1kc5wOmX3s8VQ=="
         }
       },
       "is_incremental": false,
@@ -229,6 +229,18 @@
         ".html": {
           "relative_path": "api/articles/modules/helper_methods.html",
           "hash": "rPKur765W38bwLRmSzdzgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/icon.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/icon.html",
+          "hash": "68VW2qR0CdDMtvsD+0q4tQ=="
         }
       },
       "is_incremental": false,
@@ -558,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ub3vxha3dJUxX9kH5QqBAA=="
+          "hash": "HtFgn4Kwx3Gp5EWByW3P8A=="
         }
       },
       "is_incremental": false,
@@ -573,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "4UEBrtFqyckdTlzLDNrxDA=="
+          "hash": "rIkLlFjUHhYyyjcBc4bf1Q=="
         }
       },
       "is_incremental": false,
@@ -629,7 +641,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 47,
+          "total_file_count": 48,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
