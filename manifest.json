@@ -327,7 +327,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue-history/index.html",
-          "hash": "t2GxvlZ91e9MS6K5WqyF7w=="
+          "hash": "CMEs9e2+CMwlfZY/F6o3Zg=="
         }
       },
       "is_incremental": false,
@@ -351,7 +351,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue-history/issue-history-action.html",
-          "hash": "Qd4WliZ9UawCjxoo2gKaIA=="
+          "hash": "+rVyxuYNDmID9K6lDfwJTA=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "W9XV2H4D7zKdjPeVvmxDEA=="
+          "hash": "4UEBrtFqyckdTlzLDNrxDA=="
         }
       },
       "is_incremental": false,
