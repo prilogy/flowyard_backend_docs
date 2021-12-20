@@ -96,6 +96,20 @@
 <td></td>
 <td>Вложения (файлы) к комментарию. <a href="../static-file.html">Подробнее о статических файлах</a></td>
 </tr>
+<tr>
+<td>🆕 <code>recipients</code></td>
+<td><code>IssueCommentRecipient[]?</code></td>
+<td></td>
+<td></td>
+<td>Список <a href="#%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B0%D1%82-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D1%8F">адресатов</a></td>
+</tr>
+<tr>
+<td>🆕 <code>isMessage</code></td>
+<td><code>bool</code> (getter)</td>
+<td></td>
+<td></td>
+<td>Является ли комментарий сообщением</td>
+</tr>
 </tbody>
 </table>
 <h3 id="вложение-комментария-issuecommentattachment">Вложение комментария (<code>IssueCommentAttachment</code>)</h3>
@@ -127,6 +141,43 @@
 </tr>
 </tbody>
 </table>
+<h3 id="-адресат-issuecommentrecipient">🆕 Адресат (<code>IssueCommentRecipient</code>)</h3>
+<p>Если <code>issueComment.recipients</code> не пустое(внутри хотя бы один элемент), то комментарий является сообщением (тем не менее для определения этого использовать <code>issueComment.isMessage</code>)</p>
+<h3 id="свойства-2">Свойства</h3>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userId</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>Id пользователя адресата</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td><code>int</code></td>
+<td><code>&gt;=0</code></td>
+<td>✅</td>
+<td>Порядок вложения при загрузке пользователем</td>
+</tr>
+</tbody>
+</table>
+<h4 id="добавление-сообщения">Добавление сообщения</h4>
+<p>При отправке сообщения происходят следующие действия над <code>issueComment</code>:</p>
+<p>В <code>issueComment.recipients</code> кладётся объект с <code>userId</code> равным:</p>
+<ul>
+<li>Если исполнитель задачи пишет соообщение - то <code>issue.createdByUserId</code></li>
+<li>Если отправитель задачи пишет сообщение - то <code>issue.executorUserId</code></li>
+</ul>
 </article>
           </div>
           

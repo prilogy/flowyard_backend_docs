@@ -168,7 +168,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/issue-calculated.html",
-          "hash": "AHbObDjNSokG6fSsH2iTzw=="
+          "hash": "Ybh48CKZmLUmMHKuyNcelQ=="
         }
       },
       "is_incremental": false,
@@ -363,7 +363,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue-history/issue-comment.html",
-          "hash": "QhMW8YXLqWPNTh4Q8xk7pA=="
+          "hash": "Im/ZLpUgA8KnDoD0tyAOqg=="
         }
       },
       "is_incremental": false,
@@ -612,7 +612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "9sSsUc1JxRmuaEpybUyx+A=="
+          "hash": "ca0b7VDQ5e45qwE3V3Kz5A=="
         }
       },
       "is_incremental": false,
