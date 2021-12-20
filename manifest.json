@@ -156,7 +156,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/index.html",
-          "hash": "FJcNhNG63+lB5aK9zgqHnA=="
+          "hash": "I3MQPXcjujh+cY6IgmiR/g=="
         }
       },
       "is_incremental": false,
@@ -399,7 +399,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue/index.html",
-          "hash": "pB+K921VyY7/cFa2WWnQfA=="
+          "hash": "w84B89cXNQn75CLK2UTpPg=="
         }
       },
       "is_incremental": false,
@@ -419,11 +419,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/issue/issue-proof-requirement.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/issue/issue-proof-requirement.html",
+          "hash": "bz1u4z26xM/6CwaZTNM8PA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/issue/issue-proof.md",
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue/issue-proof.html",
-          "hash": "kDckPxXTSXov5sGOL2zevQ=="
+          "hash": "aTDM486Zbo2YLuj0+DrhDg=="
         }
       },
       "is_incremental": false,
@@ -435,7 +447,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/recurring-issue/index.html",
-          "hash": "5yLHKtlgxMkFT6MwmUn9gQ=="
+          "hash": "anLobG04DhAyD4r7OvaZQg=="
         }
       },
       "is_incremental": false,
@@ -486,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/recurring-issue/recurring-issue-proof.html",
-          "hash": "6fTFYLLmxVWoYCw0/SVLew=="
+          "hash": "l8tKNSa+FICeGYmmmyVbcw=="
         }
       },
       "is_incremental": false,
@@ -577,12 +589,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tkr04Gt3TjnHBZsx82BD6A=="
+          "hash": "rgT0qB3AMf4eUDtoLP64Zg=="
         }
       },
       "is_incremental": false,
@@ -597,7 +612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "2LIVb7bZMmnX0pX0mJjiNw=="
+          "hash": "9sSsUc1JxRmuaEpybUyx+A=="
         }
       },
       "is_incremental": false,
@@ -653,7 +668,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 49,
+          "total_file_count": 50,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

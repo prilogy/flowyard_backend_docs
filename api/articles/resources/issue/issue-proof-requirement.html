@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1055;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1072; (Issue) </title>
+    <title>&#1058;&#1088;&#1077;&#1073;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1076;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1072; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueProofRequirement, &#1088;&#1072;&#1085;&#1077;&#1077; IssueProof) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1055;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1072; (Issue) ">
+    <meta name="title" content="&#1058;&#1088;&#1077;&#1073;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1076;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1072; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084;&#1099; (IssueProofRequirement, &#1088;&#1072;&#1085;&#1077;&#1077; IssueProof) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -67,8 +67,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="проблема-issue">Проблема (<code>Issue</code>)</h1>
+<h1 id="требование-доказательства-проблемы-issueproofrequirement-ранее-issueproof">Требование доказательства проблемы (<code>IssueProofRequirement</code>, ранее <code>IssueProof</code>)</h1>
 
+<p>С помощью этой сущности задаются правила проверки доказательства для проблемы.</p>
+<p>Если свойство <code>issue.proof</code> с этим типом равно <code>null</code> - доказательство не требуется.</p>
 <h2 id="свойства">Свойства</h2>
 <table>
 <thead>
@@ -82,130 +84,56 @@
 </thead>
 <tbody>
 <tr>
-<td><code>name</code></td>
+<td><code>text</code></td>
 <td><code>string</code></td>
 <td></td>
 <td>✅</td>
-<td>Название</td>
+<td>Текст к требованию доказательства</td>
 </tr>
 <tr>
-<td><code>description</code></td>
-<td><code>string</code></td>
-<td></td>
-<td></td>
-<td>Описание</td>
-</tr>
-<tr>
-<td><code>awaitedResult</code></td>
-<td><code>string</code></td>
-<td><code>&gt;0</code></td>
-<td></td>
-<td>Результат</td>
-</tr>
-<tr>
-<td><code>boardId</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
+<td><code>rules</code></td>
+<td><code>IssueProofRequirementRule[]?</code></td>
+<td><code>size &gt; 0</code></td>
 <td>✅</td>
-<td>Id доски</td>
-</tr>
-<tr>
-<td><code>createdByUserId</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td></td>
-<td>Id пользователя - отправителя/создателя</td>
-</tr>
-<tr>
-<td><code>executorUserId</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td>✅</td>
-<td>Id пользователя - исполнителя</td>
-</tr>
-<tr>
-<td><code>roleId</code></td>
-<td><code>int?</code></td>
-<td><code>&gt;0</code></td>
-<td></td>
-<td>Id функции</td>
-</tr>
-<tr>
-<td><code>type</code></td>
-<td><code>string</code></td>
-<td>task / decision</td>
-<td></td>
-<td>Тип. Задача / решение</td>
-</tr>
-<tr>
-<td><code>participants</code></td>
-<td><code>IssueParticipant[]?</code></td>
-<td></td>
-<td></td>
-<td>Список участников</td>
-</tr>
-<tr>
-<td><code>currentStatus</code></td>
-<td><code>IssueStatus?</code></td>
-<td></td>
-<td></td>
-<td>Текущий статус</td>
-</tr>
-<tr>
-<td><code>proofRequirementId</code></td>
-<td><code>int?</code></td>
-<td></td>
-<td></td>
-<td>Id трребования к доказательству</td>
-</tr>
-<tr>
-<td><code>proofRequirement</code></td>
-<td>🆕 <code>IssueProofRequirement?</code></td>
-<td></td>
-<td></td>
-<td>Требование к доказательству</td>
-</tr>
-<tr>
-<td>🆕 <code>proof</code></td>
-<td><code>IssueProof?</code></td>
-<td></td>
-<td></td>
-<td>Доказательство проблемы</td>
-</tr>
-<tr>
-<td><code>dateDeadline</code></td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
-<td>Срок</td>
-</tr>
-<tr>
-<td>🆕 <code>executorDateDeadline</code></td>
-<td><code>DateTime?</code></td>
-<td></td>
-<td></td>
-<td>Срок исполнителя (используется в действиях при переходе)</td>
-</tr>
-<tr>
-<td><code>fields</code></td>
-<td><code>IssueCustomField[]</code></td>
-<td></td>
-<td>✅</td>
-<td><a href="issue-custom-field.html">Кастомные поля <code>Issue</code></a></td>
+<td>Правила к требованию доказательства</td>
 </tr>
 </tbody>
 </table>
-<h2 id="типы-проблемы">Типы проблемы</h2>
+<h3 id="правило-issueproofrequirementrule-ранее-issueproofrule">Правило (<code>IssueProofRequirementRule</code>, ранее <code>IssueProofRule</code>)</h3>
+<p>С помощью этой сущности конкретно задаются требования к комметарию, чтобы он считался доказательством.</p>
+<h4 id="свойства-1">Свойства</h4>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Тип</th>
+<th>Домен</th>
+<th>Req.</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code></td>
+<td><code>int</code></td>
+<td><code>&gt;0</code></td>
+<td>✅</td>
+<td>Числовое значение, связанное с правилом</td>
+</tr>
+<tr>
+<td><code>key</code></td>
+<td><code>string</code></td>
+<td></td>
+<td>✅</td>
+<td>Ключ типа правила</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ключи-типов-правил">Ключи типов правил</h5>
 <ul>
-<li>task - задача</li>
-<li>decision - решение</li>
+<li><code>require.text_min_length</code> - минимальное число символов текста комментария</li>
+<li><code>require.images_min_count</code> - минимальное число изображений, прикрепленных к комментарию</li>
 </ul>
-<h2 id="issueshort"><code>IssueShort</code></h2>
-<p>Упрощенная модель <code>Issue</code> для более быстрых и легких запросов. Со спецификацией можно ознакомиться в Swagger.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Для этой модели есть отдельный контроллер <code>IssueShort</code>.</p>
-</div>
 </article>
           </div>
           
@@ -214,7 +142,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/resources/issue/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/resources/issue/issue-proof-requirement.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
