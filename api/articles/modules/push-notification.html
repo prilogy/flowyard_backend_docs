@@ -73,7 +73,7 @@
 <h3 id="при-аутентификации">При аутентификации</h3>
 <p>После успешной <strong>аутентификации с паролем</strong> - отправить запрос по пути <code>POST /fcm-token</code> контроллера <code>Authorized</code>, где в модели указать текущий FCM токен и <code>RefreshTokenId</code></p>
 <h3 id="при-выходе">При выходе</h3>
-<p>При выходе из аккаунта - отправить запрос по пути <code>DELETE /fcm-token/{token}</code> контроллера <code>Authorized</code>, где в роуте вместо параметра <code>{route}</code> положить текущий FCM токен.</p>
+<p>При выходе из аккаунта - отправить запрос по пути <code>DELETE /fcm-token/{token}</code> контроллера <code>Authorized</code>, где в роуте вместо параметра <code>{token}</code> положить текущий FCM токен.</p>
 <h2 id="типы-оповещений">Типы оповещений</h2>
 <p>Тип оповещения будет храниться под ключем <code>notification_type</code></p>
 <h3 id="для-issue">Для <code>Issue</code></h3>
