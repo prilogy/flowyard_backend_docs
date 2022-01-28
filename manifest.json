@@ -308,6 +308,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/education-item.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/education-item.html",
+          "hash": "rDHw6d2sATrpeNkbaYrjuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/getting-started/autocomplete.md",
       "output": {
         ".html": {
@@ -609,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "nJ+bH10fKRo9DPIb9fvwxg=="
+          "hash": "Xxlch/C5voBCzDjDgfyHQA=="
         }
       },
       "is_incremental": false,
@@ -624,7 +636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "aYJIq/Lz9T24Am4hBX55Dw=="
+          "hash": "Ph8NdoPl1+RRP8fDGEerhw=="
         }
       },
       "is_incremental": false,
@@ -680,7 +692,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 51,
+          "total_file_count": 52,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
