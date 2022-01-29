@@ -118,6 +118,25 @@
 <p>Хранится в <code>user.educationHistory</code> (возвращается только для авторизованного пользователя).</p>
 <h3 id="сохранение-прогресса">Сохранение прогресса</h3>
 <p>Чтобы сохранить прогресс, нужно отправить запрос <code>POST /</code> контроллера <code>Education</code>, где <code>key</code> тела запроса - ключ обучающего элемента. Подобности по запросу - в Swagger.</p>
+<h3 id="ключи-обучающих-элементов">Ключи обучающих элементов</h3>
+<pre><code class="lang-csharp">// Основы
+public const string Intro = &quot;ed.b.i&quot;; // Вводное видео
+public const string Overview = &quot;ed.b.o&quot;; // Обзор платформы
+public const string Settings = &quot;ed.b.s&quot;; // Настройка личного профиля
+    
+
+// Оргструктура
+public const string Intro = &quot;ed.o.i&quot;; // Вводное видео
+public const string SettingUpOrgchart = &quot;ed.o.s&quot;; // Технические настройки
+    
+    
+// Коммуникации
+public const string Intro = &quot;ed.c.i&quot;; // Вводное видео
+public const string WorkingWithIssues = &quot;ed.c.wwi&quot;; // Работа с задачами
+public const string RecurringIssues = &quot;ed.c.ri&quot;; // Повторяющиеся задачи
+public const string SettingUpRecurringIssues = &quot;ed.c.s&quot;; // Настройки повторяющихся задач
+
+</code></pre>
 </article>
           </div>
           
