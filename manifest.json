@@ -300,7 +300,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/report.html",
-          "hash": "4qi8wasjOYGJsSd6DY8DIw=="
+          "hash": "uRETfFsFW2Ne4xdUbNrITw=="
         }
       },
       "is_incremental": false,
@@ -648,7 +648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "rF45oTFqaOygKB2cacRKJg=="
+          "hash": "f3aZDzOnS89F4F8PrBAJzg=="
         }
       },
       "is_incremental": false,
