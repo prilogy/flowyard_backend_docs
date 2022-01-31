@@ -69,32 +69,55 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="отчеты">Отчеты</h1>
 
-<h2 id="коммуникации">Коммуникации</h2>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Все запросы ниже указаны для контроллера <code>Report</code></p>
 </div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Если в запросе отмечено указание дат - они указываются в <code>query</code> параметрах <code>DateFrom</code>(от) &amp; <code>DateTo</code>(до)</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Даты указываются в ISO 8601</p>
+</div>
+<h2 id="коммуникации">Коммуникации</h2>
 <h3 id="по-статусам">По статусам</h3>
 <p>Запрос - <code>GET/ custom-rule</code></p>
+<p><strong>Указание дат -</strong> ✅</p>
 <h4 id="флоу">Флоу</h4>
 <ol>
 <li>Из тела ответа берем <code>.items</code> и рендерим список объектов, где в каждом есть также <code>.items</code>, которые реализуют
 группировку по пользователям. <code>value</code> здесь - счетчик, отображать напротив пользователя, которого брать по <code>userId</code>
 из <code>.users</code> тела ответа.</li>
 <li>Для каждого <code>userId</code> делаем вложенный список из самых <code>Issue</code>, которые при раскрытии списка получаем с помощью
-контроллера <code>Issue</code> и фильтрами <code>ExecutorUserId=${items[x].items[y].userId}&amp;CustomFilterKey=${items[x].key}</code></li>
+контроллера <code>Issue</code> и фильтрами:
+<ul>
+<li><code>ExecutorUserId</code> - <code>id</code> пользователя</li>
+<li><code>CustomFilterKey</code> - <code>key</code> объекта в <code>.items</code></li>
+<li><code>CustomFilterKeyDateFrom</code> - дата &quot;от&quot;</li>
+<li><code>CustomFilterKeyDateTo</code> - дата &quot;до&quot;</li>
+</ul>
+</li>
 </ol>
 <h3 id="-по-нарушениям">🆕 По нарушениям</h3>
 <p>Запрос - <code>GET/ violation</code></p>
+<p><strong>Указание дат -</strong> ❌</p>
 <h4 id="флоу-1">Флоу</h4>
 <ol>
 <li>Из раздела <a href="#%D1%84%D0%BB%D0%BE%D1%83">По статусам - Флоу</a></li>
 <li>Для каждого <code>userId</code> делаем вложенный список из самых <code>Issue</code>, которые при раскрытии списка получаем с помощью
-контроллера <code>Issue</code> и фильтрами <code>WithViolationUserId=${items[x].items[y].userId}&amp;WithViolationKey=${items[x].key}</code></li>
+контроллера <code>Issue</code> и фильтрами:
+<ul>
+<li><code>WithViolationUserId</code> - <code>id</code> пользователя</li>
+<li><code>WithViolationKey</code> - <code>key</code> объекта в <code>.items</code></li>
+</ul>
+</li>
 </ol>
 <h2 id="-драйверы">🆕 Драйверы</h2>
-<p>Запрос - <code>GET/ driver</code>, в <code>query</code> параметрах <code>DateFrom</code>(от) &amp; <code>DateTo</code>(до) указываются даты в ISO 8601 формате</p>
-<p>Запрос возвращает модель <code>DriverReport</code>:</p>
+<p>Запрос - <code>GET/ driver</code></p>
+<p><strong>Указание дат -</strong> ✅</p>
+<p>Запрос возвращает модель <code>DriverReport</code></p>
 <h3 id="driverreport"><code>DriverReport</code></h3>
 <pre><code>DriverReport {
   writesCount integer($int32) // Написали в мессенджеры / Wrote to messenger
