@@ -70,8 +70,12 @@
 <h1 id="отчеты">Отчеты</h1>
 
 <h2 id="коммуникации">Коммуникации</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Все запросы ниже указаны для контроллера <code>Report</code></p>
+</div>
 <h3 id="по-статусам">По статусам</h3>
-<p>Запрос - <code>GET/ custom-rule</code> контроллера <code>Report</code></p>
+<p>Запрос - <code>GET/ custom-rule</code></p>
 <h4 id="флоу">Флоу</h4>
 <ol>
 <li>Из тела ответа берем <code>.items</code> и рендерим список объектов, где в каждом есть также <code>.items</code>, которые реализуют
@@ -81,15 +85,24 @@
 контроллера <code>Issue</code> и фильтрами <code>ExecutorUserId=${items[x].items[y].userId}&amp;CustomFilterKey=${items[x].key}</code></li>
 </ol>
 <h3 id="-по-нарушениям">🆕 По нарушениям</h3>
-<p>Запрос - <code>GET/ violation</code> контроллера <code>Report</code></p>
+<p>Запрос - <code>GET/ violation</code></p>
 <h4 id="флоу-1">Флоу</h4>
 <ol>
 <li>Из раздела <a href="#%D1%84%D0%BB%D0%BE%D1%83">По статусам - Флоу</a></li>
 <li>Для каждого <code>userId</code> делаем вложенный список из самых <code>Issue</code>, которые при раскрытии списка получаем с помощью
 контроллера <code>Issue</code> и фильтрами <code>WithViolationUserId=${items[x].items[y].userId}&amp;WithViolationKey=${items[x].key}</code></li>
 </ol>
-<h2 id="драйверы">Драйверы</h2>
-<p>В разработке...</p>
+<h2 id="-драйверы">🆕 Драйверы</h2>
+<p>Запрос - <code>GET/ driver</code></p>
+<h3 id="свойства-и-их-названия">Свойства и их названия</h3>
+<pre><code>DriverReport {
+  writesCount integer($int32) // Написали в мессенджеры / Wrote to messenger
+  callsCount integer($int32) // Позвонили / Called
+  fixedViolations integer($int32) // Устранили нарушений / Fixed violations
+  processAvgTimeInMinutes number($double) // Среднее время обработки / Average process time
+  overallTimeSavedInHours number($double) // Сэкономлено времени / Saved time
+}
+</code></pre>
 </article>
           </div>
           
