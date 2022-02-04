@@ -70,7 +70,8 @@
 <h1 id="действия-при-статусе">Действия при статусе</h1>
 
 <p>Действия обрабатываются при помощи ключей в свойстве <code>baseActionKey</code> модели <code>BoardStatusAction</code></p>
-<p>Список доступных действий можно получить по роуту <code>GET/ {id}/calculated</code> контроллера <code>Issue</code>, либо присоединить их к модели <code>Issue</code> в обычных запросах ресурсов при помощи <a href="additional-params.html">доп. параметров</a>.</p>
+<p>Список доступных действий можно получить по роуту <code>GET/ {id}/calculated</code> контроллера <code>Issue</code>, либо присоединить их к
+модели <code>Issue</code> в обычных запросах ресурсов при помощи <a href="additional-params.html">доп. параметров</a>.</p>
 <h2 id="типы-действий">Типы действий</h2>
 <table>
 <thead>
@@ -97,9 +98,9 @@
 <td>Открывается диалог с копированием <code>issue</code></td>
 </tr>
 <tr>
-<td>🆕 reject</td>
+<td>🆕 rj</td>
 <td>Отклонить</td>
-<td>Открывается диалог с вводом текста(причина)</td>
+<td>Открывается диалог с вводом текста(причина). Создать <code>IssueHistory</code> вида: <br> <code>{ issueId: &lt;id задачи&gt;, comment: { text: &lt;причина&gt; }, actions: [ { key: &quot;rj&quot; } ] }</code></td>
 </tr>
 </tbody>
 </table>
@@ -111,7 +112,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/modules/communication/actions.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/modules/communication/actions.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
