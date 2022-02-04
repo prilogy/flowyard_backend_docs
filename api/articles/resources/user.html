@@ -129,10 +129,16 @@
 <td>Таймзона</td>
 </tr>
 <tr>
-<td>🆕 <code>avatar</code></td>
+<td><code>avatar</code></td>
 <td><code>UserAvatar</code></td>
 <td></td>
 <td>Аватар пользователя. <strong>Id статического файла с типом <code>image</code> указывается в <code>userAvatar.imageId</code></strong></td>
+</tr>
+<tr>
+<td>🆕 <code>contact</code></td>
+<td><code>UserContact</code></td>
+<td></td>
+<td>Контактные данные пользователя. <code>contact.name</code> - название, <code>contact.value</code> - значение.</td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +152,7 @@
 <h5>Note</h5>
 <p>После выхода из компании от лица текущего пользователя нужно делать повторную аутентификацию с refresh token.</p>
 </div>
-<h2 id="-usershort">🆕 <code>UserShort</code></h2>
+<h2 id="usershort"><code>UserShort</code></h2>
 <p>Упрощенная модель <code>User</code> для более быстрых и легких запросов. Со спецификацией можно ознакомиться в Swagger.</p>
 <div class="NOTE">
 <h5>Note</h5>

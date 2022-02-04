@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/user.html",
-          "hash": "Wjr7tKp1yogaMS2ooUVm8Q=="
+          "hash": "fqn2R9nuAfszTWi7AhnpWA=="
         }
       },
       "is_incremental": false,
@@ -648,7 +648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "zvtyI6oXAb/R2dNz/8q3MQ=="
+          "hash": "lBjor2EIf9UH9o6nI553tA=="
         }
       },
       "is_incremental": false,
