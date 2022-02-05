@@ -168,7 +168,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/issue-calculated.html",
-          "hash": "Ybh48CKZmLUmMHKuyNcelQ=="
+          "hash": "b74JZcWGppdzOYYQT+II3g=="
         }
       },
       "is_incremental": false,
@@ -204,7 +204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/modules/communication/transition-actions.html",
-          "hash": "MmcoGYYGzKsckDOjmklKNw=="
+          "hash": "Jz9+soXPePB8DdP+l81LEQ=="
         }
       },
       "is_incremental": false,
@@ -435,7 +435,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue/index.html",
-          "hash": "w84B89cXNQn75CLK2UTpPg=="
+          "hash": "E2pCk3KhpJPxam8+dZJlXA=="
         }
       },
       "is_incremental": false,
@@ -648,7 +648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "lBjor2EIf9UH9o6nI553tA=="
+          "hash": "ZhjG1YgEbgARe3eK07+ppQ=="
         }
       },
       "is_incremental": false,
