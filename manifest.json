@@ -590,6 +590,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/user-schedule.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/user-schedule.html",
+          "hash": "KnkSklLp4dflhKd68IbgIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/user.md",
       "output": {
         ".html": {
@@ -633,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "AYrfC96DPY5ihozgyJVjbA=="
+          "hash": "J49iRMLC9Sqg5xeSxP66Hg=="
         }
       },
       "is_incremental": false,
@@ -648,7 +660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "rxIrd9IImYYr+Btswn7J5A=="
+          "hash": "8XmcAdL0GK0RVNk70I8KhA=="
         }
       },
       "is_incremental": false,
@@ -704,7 +716,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 53,
+          "total_file_count": 54,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
