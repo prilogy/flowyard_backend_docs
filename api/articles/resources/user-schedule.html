@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1052;&#1077;&#1085;&#1102; </title>
+    <title>&#1043;&#1088;&#1072;&#1092;&#1080;&#1082; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1103; (UserSchedule) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1052;&#1077;&#1085;&#1102; ">
+    <meta name="title" content="&#1043;&#1088;&#1072;&#1092;&#1080;&#1082; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1103; (UserSchedule) ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -67,71 +67,101 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="меню">Меню</h1>
+<h1 id="график-пользователя-userschedule">График пользователя (<code>UserSchedule</code>)</h1>
 
-<p>Элементы меню приходят с сервера в <code>initialInfo.menuItems</code> в виде типа <code>MenuItemWithChildren[]</code>, где сам <code>MenuItemWithChildren</code>:</p>
+<p>Сущность для хранения графика пользователя.</p>
+<h2 id="свойства">Свойства</h2>
 <table>
 <thead>
 <tr>
 <th>Свойство</th>
 <th>Тип</th>
 <th>Домен</th>
+<th>Req.</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
+<td><code>name</code> (getter)</td>
+<td><code>string</code></td>
+<td></td>
+<td></td>
+<td>Читаемое название типа</td>
+</tr>
+<tr>
+<td><code>type</code></td>
 <td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td>Id, по нему происходит сортировка. От меньшего к большему</td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B">Тип</a></td>
+<td>✅</td>
+<td><a href="#%D1%82%D0%B8%D0%BF%D1%8B">Тип</a></td>
 </tr>
 <tr>
-<td><code>name</code></td>
-<td><code>string</code></td>
+<td><code>dateFrom</code></td>
+<td><code>DateTime?</code></td>
 <td></td>
-<td>Название</td>
+<td></td>
+<td>Дата ОТ</td>
 </tr>
 <tr>
-<td><code>children</code></td>
-<td><code>MenuItemWithChildren[]</code></td>
+<td><code>dateTo</code></td>
+<td><code>DateTime?</code></td>
 <td></td>
-<td>Вложенные элементы меню, если свойство не пустое - элементы коллекции отображаются под текущим элементом с визуальным отображением вложенности</td>
+<td></td>
+<td>Дата ДО</td>
 </tr>
 <tr>
-<td><code>key</code></td>
-<td><code>string?</code></td>
+<td><code>timeFrom</code></td>
+<td><code>TimeSpan?</code></td>
 <td></td>
-<td>Ключ элемента меню</td>
+<td></td>
+<td>Время ОТ</td>
 </tr>
 <tr>
-<td><code>isCollapsible</code></td>
-<td><code>bool</code></td>
+<td><code>timeTo</code></td>
+<td><code>TimeSpan?</code></td>
 <td></td>
-<td><code>true</code> - подменю может сворачиваться и разворачиваться (по умолчанию свернуто) <br> <code>false</code> - подменю отображается в статическом развернутом виде (нет иконки сворачивания и соотв. нельзя свернуть)</td>
+<td></td>
+<td>Время ДО</td>
 </tr>
 <tr>
-<td><code>IsPending</code></td>
-<td><code>bool</code></td>
+<td><code>roleId</code></td>
+<td><code>int?</code></td>
 <td></td>
-<td><code>true</code> - напротив пункта меню мигает красный индикатор <br> <code>false</code> - нет индикатора</td>
+<td>✅</td>
+<td>Id роли, с которой ассоциируется график</td>
 </tr>
 <tr>
-<td><code>IsPendingValue</code></td>
-<td><code>string</code></td>
+<td><code>userId</code></td>
+<td><code>int</code></td>
 <td></td>
-<td>Значение, выводимое в красном индикаторе</td>
+<td>✅</td>
+<td>Id пользователя, с которым ассоциируется график</td>
+</tr>
+<tr>
+<td><code>substituteUserId</code></td>
+<td><code>int?</code></td>
+<td></td>
+<td></td>
+<td>Id пользователя, являющегося заместителем</td>
+</tr>
+<tr>
+<td><code>createdByUserId</code> (getter)</td>
+<td><code>int?</code></td>
+<td></td>
+<td></td>
+<td>Id пользователя, создавшего этот график</td>
 </tr>
 </tbody>
 </table>
-<div class="NOTE">
-<h5>Note</h5>
-<p>🆕 На основе свойства <code>key</code> на фронте привязываются действия, иконки и т.д. к этому элементу меню. <br> Если ключа нет, то элемент является сугубо разделителем (если <code>Name</code> непустое и не <code>null</code>, также выводится эта строка) , и если свойство <code>children</code> непустое - разделом. <br></p>
-</div>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Вложенность свойства <code>children</code> в уровне глубины не ограничена.</p>
-</div>
+<h2 id="типы">Типы</h2>
+<ul>
+<li>Рабочий день - 1</li>
+<li>Неполный рабочий день - 2</li>
+<li>Выходной - 3</li>
+<li>Отпуск - 4</li>
+<li>Больничный - 5</li>
+</ul>
 </article>
           </div>
           
@@ -140,7 +170,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/modules/menu.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/resources/user-schedule.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
