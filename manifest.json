@@ -411,7 +411,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue-history/issue-history-action.html",
-          "hash": "o1MfE3hK+slgriLbKAN0yw=="
+          "hash": "udUmcNL1hEKqhEUZ0fLiEw=="
         }
       },
       "is_incremental": false,
@@ -471,7 +471,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/issue/issue-proof.html",
-          "hash": "aTDM486Zbo2YLuj0+DrhDg=="
+          "hash": "boBwlbvWDr0HuLejQ6tnHg=="
         }
       },
       "is_incremental": false,
@@ -483,7 +483,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/recurring-issue/index.html",
-          "hash": "anLobG04DhAyD4r7OvaZQg=="
+          "hash": "iKl+psX6OWAHzhGdfQxRdg=="
         }
       },
       "is_incremental": false,
@@ -660,7 +660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "/kaZZ8tDX07Q2Xb94cI52A=="
+          "hash": "QMgfJC+4kqjQqD1t8MsmZg=="
         }
       },
       "is_incremental": false,
