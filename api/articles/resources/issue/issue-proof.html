@@ -88,18 +88,10 @@
 <td></td>
 <td>Id <code>IssueHistory</code> с доказательством</td>
 </tr>
-<tr>
-<td><code>isResultAchieved</code></td>
-<td><code>bool</code></td>
-<td></td>
-<td>✅</td>
-<td><code>true</code> - результат получен</td>
-</tr>
 </tbody>
 </table>
 <h2 id="флоу">Флоу</h2>
-<p>При добавлении доказательства - если <code>issue.proofRequirement == null</code> - заполняем только <code>issueProof.isResultAchieved</code>,
-иначе - и <code>issueProof.historyId</code> тоже. Историю создать предварительно перед изменением <code>issueProof</code>.</p>
+<p>Перед добавлением доказательства создать IssueHistory предварительно.</p>
 </article>
           </div>
           
@@ -108,7 +100,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/main/docs/Flowyard.Web.Docs/api/articles/resources/issue/issue-proof.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/resources/issue/issue-proof.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
