@@ -308,6 +308,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/modules/user-selection-rule.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/modules/user-selection-rule.html",
+          "hash": "UF1P7oYOezK3x61y3LI4Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/company.md",
       "output": {
         ".html": {
@@ -554,6 +566,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "api/articles/resources/role-position.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/articles/resources/role-position.html",
+          "hash": "aO0pkXbPcLQDNi3a+5ZhnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/articles/resources/role.md",
       "output": {
         ".html": {
@@ -618,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/articles/resources/user2Role.html",
-          "hash": "3AW2qWyBL6bibnCiENK0AA=="
+          "hash": "kAoWKDKnYmd8F4v9lBLZOg=="
         }
       },
       "is_incremental": false,
@@ -645,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "J49iRMLC9Sqg5xeSxP66Hg=="
+          "hash": "acYSVD/mu0XqOlHBkv7HVw=="
         }
       },
       "is_incremental": false,
@@ -660,7 +684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/version-notes.html",
-          "hash": "kjwLCzwio/M6BB869SzrqQ=="
+          "hash": "HsIp5IH4qeUUO0puRKPKGw=="
         }
       },
       "is_incremental": false,
@@ -716,7 +740,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 54,
+          "total_file_count": 56,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
