@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#1054;&#1073;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090; (EducationItem) </title>
+    <title>&#1055;&#1088;&#1072;&#1074;&#1080;&#1083;&#1086; &#1087;&#1086;&#1076;&#1073;&#1086;&#1088;&#1072; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1103; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#1054;&#1073;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090; (EducationItem) ">
+    <meta name="title" content="&#1055;&#1088;&#1072;&#1074;&#1080;&#1083;&#1086; &#1087;&#1086;&#1076;&#1073;&#1086;&#1088;&#1072; &#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1103; ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -67,7 +67,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="образовательный-элемент-educationitem">Образовательный элемент (<code>EducationItem</code>)</h1>
+<h1 id="правило-подбора-пользователя">Правило подбора пользователя</h1>
 
 <h2 id="свойства">Свойства</h2>
 <table>
@@ -75,68 +75,39 @@
 <tr>
 <th>Свойство</th>
 <th>Тип</th>
-<th>Домен</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>name</code></td>
-<td><code>string?</code></td>
-<td></td>
-<td>Название</td>
+<td><code>RoleId</code></td>
+<td><code>int?</code></td>
+<td>Id роли. <code>null</code> - все роли</td>
 </tr>
 <tr>
-<td><code>videoId</code></td>
-<td><code>string?</code></td>
-<td></td>
-<td>Id видео (YouTube)</td>
+<td><code>RolePositionId</code></td>
+<td><code>int?</code></td>
+<td>Id должности роли. <code>null</code> - все должности</td>
 </tr>
 <tr>
-<td><code>children</code></td>
-<td><code>EducationItem[]?</code></td>
-<td></td>
-<td>Дочерние элементы. <br> <strong>Если этот массив не <code>null</code> и не пуст - отображать как раздел, где <code>name</code> - его название</strong></td>
+<td><code>RolePositionType</code></td>
+<td><code>int?</code></td>
+<td>Ключ типа должности. <code>1</code> - руководители, <code>2</code> - исполнители</td>
 </tr>
 <tr>
-<td><code>isAvailable</code></td>
+<td><code>IsExcluded</code></td>
 <td><code>bool</code></td>
-<td></td>
-<td>Доступность элемента. Если <code>true</code> - доступен.</td>
+<td>Исключение. <code>true</code> - из результирующего списка исключает пользователей по текущему правилу</td>
 </tr>
 </tbody>
 </table>
-<div class="NOTE">
-<h5>Note</h5>
-<p>🆕 Данные можно получить из запроса <code>GET /</code> контроллера <code>Education</code>.</p>
-</div>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>Документация по сохранению прогресса обучения - в разработке...</p>
-</div>
-<h2 id="-прогресс-обучения">🆕 Прогресс обучения</h2>
-<p>Хранится в <code>user.educationHistory</code> (возвращается только для авторизованного пользователя).</p>
-<h3 id="сохранение-прогресса">Сохранение прогресса</h3>
-<p>Чтобы сохранить прогресс, нужно отправить запрос <code>POST /</code> контроллера <code>Education</code>, где <code>key</code> тела запроса - ключ обучающего элемента. Подобности по запросу - в Swagger.</p>
-<h3 id="ключи-обучающих-элементов">Ключи обучающих элементов</h3>
-<pre><code class="lang-csharp">// Основы
-public const string Intro = &quot;ed.b.i&quot;; // Вводное видео
-public const string Overview = &quot;ed.b.o&quot;; // Обзор платформы
-public const string Settings = &quot;ed.b.s&quot;; // Настройка личного профиля
-    
-
-// Оргструктура
-public const string Intro = &quot;ed.o.i&quot;; // Вводное видео
-public const string SettingUpOrgchart = &quot;ed.o.s&quot;; // Технические настройки
-    
-    
-// Коммуникации
-public const string Intro = &quot;ed.c.i&quot;; // Вводное видео
-public const string WorkingWithIssues = &quot;ed.c.wwi&quot;; // Работа с задачами
-public const string RecurringIssues = &quot;ed.c.ri&quot;; // Повторяющиеся задачи
-public const string SettingUpRecurringIssues = &quot;ed.c.s&quot;; // Настройки повторяющихся задач
-
-</code></pre>
+<h2 id="случаи">Случаи</h2>
+<p><a href="https://tonnus.atlassian.net/wiki/spaces/T/pages/10223654/4419.">Описаны тут</a></p>
+<h3 id="наследуемые-сущности">Наследуемые сущности</h3>
+<p>Наследуемые сущности работают по тем же правилам, имея дополнения для работы с другими сущностями.</p>
+<ul>
+<li><code>RecurringIssueExecutorConfig</code></li>
+</ul>
 </article>
           </div>
           
@@ -145,7 +116,7 @@ public const string SettingUpRecurringIssues = &quot;ed.c.s&quot;; // Настр
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/beta/docs/Flowyard.Web.Docs/api/articles/resources/education-item.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/beta/docs/Flowyard.Web.Docs/api/articles/modules/user-selection-rule.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
