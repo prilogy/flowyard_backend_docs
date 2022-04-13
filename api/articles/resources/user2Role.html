@@ -88,7 +88,7 @@
 <td>Id пользователя</td>
 </tr>
 <tr>
-<td>⚠ DEPRECATED <code>Type</code></td>
+<td><code>Type</code></td>
 <td><code>string</code></td>
 <td><a href="#%D1%82%D0%B8%D0%BF%D1%8B-%D1%81%D0%B2%D1%8F%D0%B7%D0%B8">Подробнее ниже</a></td>
 <td>Тип связи</td>
@@ -99,21 +99,23 @@
 <td><code>&gt;0</code></td>
 <td>Id функции</td>
 </tr>
-<tr>
-<td><code>RoleId</code></td>
-<td><code>int</code></td>
-<td><code>&gt;0</code></td>
-<td>Id функции</td>
-</tr>
 </tbody>
 </table>
-<h2 id="-deprecated-типы-связи">⚠ DEPRECATED Типы связи</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Одновременно может существовать только одна запись с одиаковой парой ключей <code>{ roleId, userId }</code>.</p>
+</div>
+<h2 id="типы-связи">Типы связи</h2>
 <p>Тип - строка.</p>
 <ul>
 <li><code>admin</code> - администратор</li>
 <li><code>executor_specialist</code> - исполнитель-специалист</li>
 <li><code>executor_trainee</code> - исполнитель-стажер</li>
 </ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Количество сотрудников каждого типа не ограничено. Может быть несколько администраторов и т.д.</p>
+</div>
 </article>
           </div>
           
@@ -122,7 +124,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/prilogy/flowyard_backend/blob/beta/docs/Flowyard.Web.Docs/api/articles/resources/user2Role.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/prilogy/flowyard_backend/blob/test/docs/Flowyard.Web.Docs/api/articles/resources/user2Role.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
